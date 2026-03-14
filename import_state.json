@@ -561,5 +561,20 @@
       "slot": 107,
       "scheduled": true
     }
+  },
+  "tracks": {
+    "Vertical & Technical": 1,
+    "Exploration": 2,
+    "Geology & Geography": 3,
+    "Biology": 4,
+    "Spelean History": 5,
+    "Survey & Cartography": 6,
+    "Conservation": 7,
+    "Arts & Culture": 8,
+    "Special Events": 9,
+    "Education & Community": 10,
+    "NSS Business": 11,
+    "Social & Events": 12,
+    "Speakers": 13
   }
 }
