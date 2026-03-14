@@ -1,0 +1,458 @@
+{
+  "rooms": {
+    "100": 1,
+    "102": 2,
+    "104": 3,
+    "110": 4,
+    "112": 5,
+    "154": 6,
+    "205": 7,
+    "228": 8,
+    "254": 9,
+    "Auditorium": 10,
+    "Campground": 11,
+    "Campground stage": 12,
+    "Cart Salon site": 13,
+    "Discovery Center": 14,
+    "Indiana Caverns": 15,
+    "Junior High Gym": 16,
+    "Library": 17,
+    "Registration Hallway": 18,
+    "TBA": 19,
+    "TBD": 20,
+    "Vendors Area": 21,
+    "Vendors area catwalk": 22,
+    "Windell  Ag  Building": 23,
+    "in-cave": 24
+  },
+  "submissions": {
+    "2026-07-06|Opening Ceremony|8:30 -9:00": {
+      "code": "NHJQTT",
+      "slot": 1
+    },
+    "2026-07-07|Yoga|8:00-9:00": {
+      "code": "LVCXZU",
+      "slot": 2
+    },
+    "2026-07-08|Coffee & Karst|8:00-9:00": {
+      "code": "G3NGFL",
+      "slot": 3
+    },
+    "2026-07-09|Yoga|8:00-9:00": {
+      "code": "YLK7CK",
+      "slot": 4
+    },
+    "2026-07-10|Yoga|8:00-9:00": {
+      "code": "HPYKFB",
+      "slot": 5
+    },
+    "2026-07-06|BOG Open Meeting|9:00-Noon": {
+      "code": "DNHRPR",
+      "slot": 6
+    },
+    "2026-07-07|Coffee & Karst|8:00-9:00": {
+      "code": "VNVQVK",
+      "slot": 7
+    },
+    "2026-07-08|International Exploration|9:00-Noon": {
+      "code": "JSY9FZ",
+      "slot": 8
+    },
+    "2026-07-09|Geology  and Geography|9:00-Noon": {
+      "code": "WLDPWJ",
+      "slot": 9
+    },
+    "2026-07-10|BOG Meeting|9:00-Noon": {
+      "code": "ZAH38V",
+      "slot": 10
+    },
+    "2026-07-06|Cave Exploration of the Ohio Valley Region: Indiana, Ohio, Kentucky|9:00-Noon": {
+      "code": "SE9KLY",
+      "slot": 11
+    },
+    "2026-07-07|US Exploration|9:00-Noon": {
+      "code": "AWL3SR",
+      "slot": 12
+    },
+    "2026-07-08|Biospeleology Session|9:00-Noon": {
+      "code": "FJHNRG",
+      "slot": 13
+    },
+    "2026-07-09|Spelean History|9:00-Noon": {
+      "code": "USYEQG",
+      "slot": 14
+    },
+    "2026-07-10|Video Salon Viewing|9:00 - Noon": {
+      "code": "ARYHGU",
+      "slot": 15
+    },
+    "2026-07-06|Introduction to Sketching: Digital and Paper|9:00-Noon": {
+      "code": "EH937D",
+      "slot": 16
+    },
+    "2026-07-07|Cave Conservation & Science|9:00-Noon": {
+      "code": "S8TWBM",
+      "slot": 17
+    },
+    "2026-07-08|Speleothem Repair Workshop Part II|9:00-Noon": {
+      "code": "KRFLTJ",
+      "slot": 18
+    },
+    "2026-07-09|Planned Giving|9-Noon": {
+      "code": "R7VBRW",
+      "slot": 19
+    },
+    "2026-07-10|Fine Art Salon Critique|9:00-10:00": {
+      "code": "LQYSHL",
+      "slot": 20
+    },
+    "2026-07-06|Speleology for Cavers|9:00-Noon": {
+      "code": "GDKSUC",
+      "slot": 21
+    },
+    "2026-07-07|Speleothem Repair    Workshop|9:00-Noon": {
+      "code": "KNX9RX",
+      "slot": 22
+    },
+    "2026-07-08|Cave Digging Section|9:00-Noon": {
+      "code": "FHBVVD",
+      "slot": 23
+    },
+    "2026-07-09|State Cave Surveys|9-Noon": {
+      "code": "LHEHKN",
+      "slot": 24
+    },
+    "2026-07-10|Cartographic Salon Critique|10:00-Noon": {
+      "code": "HRVF7P",
+      "slot": 25
+    },
+    "2026-07-06|Carlsbad Caverns Listening Session|9:00-noon": {
+      "code": "AKSVS9",
+      "slot": 26
+    },
+    "2026-07-07|Cavers Against Sexual Harassment|9:00-Noon": {
+      "code": "GSVSRL",
+      "slot": 27
+    },
+    "2026-07-08|Discover Vertical Caving|9:00-Noon": {
+      "code": "AFUCUP",
+      "slot": 28
+    },
+    "2026-07-09|Vertical Section session|9-Noon": {
+      "code": "D3H8E3",
+      "slot": 29
+    },
+    "2026-07-10|Photo Salon Critique|10:00-Noon": {
+      "code": "YJRYJC",
+      "slot": 30
+    },
+    "2026-07-06|Explorers Club Session|9:00-Noon": {
+      "code": "7FBFC3",
+      "slot": 31
+    },
+    "2026-07-07|Discover Vertical Caving|8:30-12:30": {
+      "code": "AJZQGH",
+      "slot": 32
+    },
+    "2026-07-08|Caving & Culture|9:00-Noon": {
+      "code": "RRFQVH",
+      "slot": 33
+    },
+    "2026-07-09|Paleontology|9-Noon": {
+      "code": "7NEREN",
+      "slot": 34
+    },
+    "2026-07-10|Print Salon Critique|10:00-Noon": {
+      "code": "UUKUHH",
+      "slot": 35
+    },
+    "2026-07-07|Photo Workshop|9:00-Noon": {
+      "code": "V9LFWZ",
+      "slot": 36
+    },
+    "2026-07-08|NPS Cave Managers Meeting|9:00-Noon": {
+      "code": "MZNRN9",
+      "slot": 37
+    },
+    "2026-07-09|Contingency Vertical Workshop|8:00-Noon": {
+      "code": "AFTFUD",
+      "slot": 38
+    },
+    "2026-07-10|Cave Ballad Salon Critique|10:00-Noon": {
+      "code": "UFDVYE",
+      "slot": 39
+    },
+    "2026-07-07|Interagency Meeting|9:00-Noon": {
+      "code": "AJA9KX",
+      "slot": 40
+    },
+    "2026-07-10|Cave Writers  Workshop|9:00-Noon": {
+      "code": "878B9Y",
+      "slot": 41
+    },
+    "2026-07-10|NSF Trustees Meeting (open)|9:00-Noon": {
+      "code": "HZWS3Z",
+      "slot": 42
+    },
+    "2026-07-06|BOG Lunch (Closed)|Noon-2:00": {
+      "code": "HPFWVA",
+      "slot": 43
+    },
+    "2026-07-07|Luminary Speaker:  Cat & Charlie Bishop|12:30-1:30": {
+      "code": "PJXSNT",
+      "slot": 44
+    },
+    "2026-07-08|Luminary Speaker: Jill Yager|12:30-1:30": {
+      "code": "N9WFX3",
+      "slot": 45
+    },
+    "2026-07-09|Luminary Speaker: Gordon Smith|12:30-1:30": {
+      "code": "E7QRY8",
+      "slot": 46
+    },
+    "2026-07-10|Survey & Cartography Session|Noon-1:00": {
+      "code": "PUBPBV",
+      "slot": 47
+    },
+    "2026-07-06|Speleology Class Lunch|Noon-1:00": {
+      "code": "JCGVPA",
+      "slot": 48
+    },
+    "2026-07-07|Cave Conservation & Science|Noon-1:00": {
+      "code": "KU9FTA",
+      "slot": 49
+    },
+    "2026-07-08|Biospeleology|1:00-2:00": {
+      "code": "B7PBWD",
+      "slot": 50
+    },
+    "2026-07-09|Geology and Geography meeting|1:30-2:30": {
+      "code": "AGYPWH",
+      "slot": 51
+    },
+    "2026-07-10|Arts and Letters Lunch|Noon-1:00": {
+      "code": "JXFJKN",
+      "slot": 52
+    },
+    "2026-07-06|Vertical Climbing Contests|12:30 start": {
+      "code": "8V39Z7",
+      "slot": 53
+    },
+    "2026-07-08|Vertical  Climbing Contests|Noon-1:00": {
+      "code": "A9C3HR",
+      "slot": 54
+    },
+    "2026-07-09|Vertical Section Lunch/Business Meeting|Noon-1:00": {
+      "code": "WKHLG9",
+      "slot": 55
+    },
+    "2026-07-10|The Caving Podcast Live: Jason Ballensky|noon-1:00": {
+      "code": "LCQDRW",
+      "slot": 56
+    },
+    "2026-07-06|Communications & Electronics|12:30-2:00": {
+      "code": "UDCKBY",
+      "slot": 57
+    },
+    "2026-07-07|Book signing: Gary Roberson|11:30-1:00": {
+      "code": "AXKB3E",
+      "slot": 58
+    },
+    "2026-07-09|NCKMS Steering Committee|Noon-1:00": {
+      "code": "3KXM3H",
+      "slot": 59
+    },
+    "2026-07-06|10 Years of The Caving Podcast (Indiana focus)|Noon-1:00": {
+      "code": "ELXL7B",
+      "slot": 60
+    },
+    "2026-07-07|Vertical climbing contests|12:30 start": {
+      "code": "GV8BKP",
+      "slot": 61
+    },
+    "2026-07-09|Book signing: Gary Roberson|11:30-1:00": {
+      "code": "MEBNTN",
+      "slot": 62
+    },
+    "2026-07-06|Fine Arts Salon Opening|12:00-2:00": {
+      "code": "TFQ87J",
+      "slot": 63
+    },
+    "2026-07-07|US Exploration|2:00-5:00": {
+      "code": "UHLBCL",
+      "slot": 64
+    },
+    "2026-07-08|International Exploration|2:00-5:00": {
+      "code": "SFWDJ3",
+      "slot": 65
+    },
+    "2026-07-09|Geology and Geography|2:00-5:00": {
+      "code": "QRXJFU",
+      "slot": 66
+    },
+    "2026-07-10|Survey & Cartography Session|1:00-5:00": {
+      "code": "P7WMBS",
+      "slot": 67
+    },
+    "2026-07-06|BOG Meeting (Closed)|2:00 - 5:00": {
+      "code": "CE3SHL",
+      "slot": 68
+    },
+    "2026-07-07|Cave Conservation &  Science|2:00-5:01": {
+      "code": "FPUNSU",
+      "slot": 69
+    },
+    "2026-07-08|Congress of Grottos|2:00-5:00": {
+      "code": "AQZRY8",
+      "slot": 70
+    },
+    "2026-07-09|Cave Diving Exploration|1:00-5:00": {
+      "code": "FME3TP",
+      "slot": 71
+    },
+    "2026-07-10|Cave Writers  Workshop|1:00-4:00": {
+      "code": "KVSDHZ",
+      "slot": 72
+    },
+    "2026-07-06|Vertical Climbing Contests|1:00-5:00": {
+      "code": "JNHRZS",
+      "slot": 73
+    },
+    "2026-07-07|Convention Planning|2:00-5:00": {
+      "code": "7GZLXY",
+      "slot": 74
+    },
+    "2026-07-08|Biospeleology Session|2:00-5:00": {
+      "code": "U7NAGK",
+      "slot": 75
+    },
+    "2026-07-09|Vertical Section Annual meeting, Awards|1:00-5:00": {
+      "code": "QPY7YP",
+      "slot": 76
+    },
+    "2026-07-10|BOG Meeting|1:00-5:00": {
+      "code": "TXDSSB",
+      "slot": 77
+    },
+    "2026-07-06|Cave Exploration of the Ohio Valley Region: Indiana, Ohio, Kentucky|1:00-5:00": {
+      "code": "NRZ7JX",
+      "slot": 78
+    },
+    "2026-07-08|Speleophilatelic Section Meeting|1:00-2:00": {
+      "code": "X9KHJY",
+      "slot": 79
+    },
+    "2026-07-09|Archeology|1:00-5:00": {
+      "code": "WPLXYV",
+      "slot": 80
+    },
+    "2026-07-10|Collegiate Grotto Challenges and Solutions|1:30-3:00": {
+      "code": "AVFTRP",
+      "slot": 81
+    },
+    "2026-07-06|Speleology for Cavers|1:00-5:00": {
+      "code": "THHJWM",
+      "slot": 82
+    },
+    "2026-07-07|Climbing contests|1:00-5::00": {
+      "code": "B7DEVN",
+      "slot": 83
+    },
+    "2026-07-08|derigging from Vertical contests (closed)|1:00-5:00": {
+      "code": "X9DF77",
+      "slot": 84
+    },
+    "2026-07-09|Convention Debrief|2:00-5:00": {
+      "code": "VZYBNB",
+      "slot": 85
+    },
+    "2026-07-10|NSF Trustees Meeting (closed)|1:00-5:00": {
+      "code": "HGA7BK",
+      "slot": 86
+    },
+    "2026-07-06|Vertical Training Commission (VTC)  (30 seats, 1 table)|1:00-4:00": {
+      "code": "YEBVNM",
+      "slot": 87
+    },
+    "2026-07-09|NSS Preserves & Acquisitions|2:00-5:00": {
+      "code": "MCCUZB",
+      "slot": 88
+    },
+    "2026-07-06|Communications & Electronic Session|2:00-5:00": {
+      "code": "WUZH7Z",
+      "slot": 89
+    },
+    "2026-07-09|Cave Photography Session|2:00-5:00": {
+      "code": "S7QJVC",
+      "slot": 90
+    },
+    "2026-07-06|In-Cave Sketching - Paper & Digital|1:00-5:00": {
+      "code": "CNBAVE",
+      "slot": 91
+    },
+    "2026-07-09|NSS Awards Committee|2:00-3:00 open  4:00-5:00 closed": {
+      "code": "MEYQAH",
+      "slot": 92
+    },
+    "2026-07-06|Cave Conservancy Roundtable|1:00-4:00": {
+      "code": "FMAPBM",
+      "slot": 93
+    },
+    "2026-07-09|Sketching Contest Results|3:00-4:00": {
+      "code": "QTDQQL",
+      "slot": 94
+    },
+    "2026-07-06|NCRC Annual Meeting|1:00-5:00": {
+      "code": "MSRMKR",
+      "slot": 95
+    },
+    "2026-07-06|Howdy Party Dinner & Music|6:30 - Midnight": {
+      "code": "83BW8C",
+      "slot": 96
+    },
+    "2026-07-07|Fellows- New Members Reception|6:30-8:30": {
+      "code": "HQ8LXW",
+      "slot": 97
+    },
+    "2026-07-08|NSS Auction|7:00 start": {
+      "code": "GD7PYQ",
+      "slot": 98
+    },
+    "2026-07-09|Photo Salon Short Show/Salon Awards|5:30-7:00": {
+      "code": "G3C7RY",
+      "slot": 99
+    },
+    "2026-07-10|NSS Awards Banquet|6:30 - 8:30": {
+      "code": "87VDD9",
+      "slot": 100
+    },
+    "2026-07-06|Cave Open House|6:30-10:00": {
+      "code": "C7YJKS",
+      "slot": 101
+    },
+    "2026-07-07|Open Mic|8:00 start": {
+      "code": "PUPHUJ",
+      "slot": 102
+    },
+    "2026-07-08|Campground Party|9:00 start": {
+      "code": "MKY7Z8",
+      "slot": 103
+    },
+    "2026-07-09|Full Photo Salon/Salon Awards|7:30-10:00": {
+      "code": "WRWLER",
+      "slot": 104
+    },
+    "2026-07-10|Campground Party|9:30-Midnight": {
+      "code": "SDUDXA",
+      "slot": 105
+    },
+    "2026-07-07|Featured Speaker: Genevieve von Petzinger|9:00pm": {
+      "code": "TSHWNR",
+      "slot": 106
+    },
+    "2026-07-09|Caver Story Telling Contest|10:00- Midnight": {
+      "code": "L7SYVG",
+      "slot": 107
+    }
+  }
+}
