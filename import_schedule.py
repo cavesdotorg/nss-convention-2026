@@ -87,10 +87,11 @@ def normalize_time_str(s):
     return s
 
 
-def parse_single_time(t, day_date):
+def parse_single_time(t, day_date, assume_pm=False):
     """
     Parse a single time token (e.g. '9:00', 'Noon', 'Midnight', '8:30am', '6pm')
     and return a datetime on day_date in TZ_OFFSET.
+    assume_pm: if True and no am/pm given, treat ambiguous hours (1-11) as PM.
     Returns None on failure.
     """
     t = t.strip()
@@ -136,8 +137,10 @@ def parse_single_time(t, day_date):
     elif am_pm == 'am' and hour == 12:
         hour = 0
     elif am_pm is None:
-        # Heuristic: hour < 8 assumed PM (e.g. "6" → 18:00), otherwise AM
-        if hour < 8:
+        if assume_pm and 1 <= hour <= 11:
+            hour += 12
+        elif hour < 8:
+            # Heuristic: hour < 8 with no am/pm → PM (e.g. "6" → 18:00)
             hour += 12
 
     if not (0 <= hour <= 23 and 0 <= minute <= 59):
@@ -146,9 +149,10 @@ def parse_single_time(t, day_date):
     return day_date.replace(hour=hour, minute=minute, second=0, microsecond=0)
 
 
-def parse_time_range(time_str, day_date):
+def parse_time_range(time_str, day_date, assume_pm=False):
     """
     Parse a time range string like '9:00-Noon', '8:30-9:00', '12:30 start'.
+    assume_pm: if True, treat ambiguous start/end hours as PM.
     Returns (start_dt, end_dt) or (start_dt, None) if no end.
     Returns (None, None) on failure.
     """
@@ -156,20 +160,25 @@ def parse_time_range(time_str, day_date):
     if not time_str:
         return None, None
 
-    # Try to split on '-'
-    # Be careful: 'Noon' and 'Midnight' don't have dashes in them
-    # We need to find the dash that separates start from end
-    # Strategy: find '-' not preceded by a digit (for negative) — just split on first '-'
-    # But "8:30-9:00" and "8:30 - 9:00" should both work after normalize
     parts = time_str.split('-', 1)
 
-    start_dt = parse_single_time(parts[0], day_date)
+    # If end is 'Midnight', the start must be PM
+    end_token = parts[1].strip() if len(parts) == 2 else ''
+    if end_token.lower() == 'midnight':
+        assume_pm = True
+
+    start_dt = parse_single_time(parts[0], day_date, assume_pm=assume_pm)
     if start_dt is None:
         return None, None
 
-    if len(parts) == 2 and parts[1].strip():
-        end_dt = parse_single_time(parts[1], day_date)
-        # Handle wrap: end <= start means end is next day (e.g. "11pm-1am")
+    if end_token:
+        end_dt = parse_single_time(end_token, day_date)
+        # If start is evening (≥18:00) and end is ambiguous AM (1-11), try PM for end
+        if end_dt is not None and start_dt.hour >= 18 and 1 <= end_dt.hour <= 11:
+            end_pm = end_dt.replace(hour=end_dt.hour + 12)
+            if end_pm > start_dt:
+                end_dt = end_pm
+        # Handle wrap: end <= start means end is next day
         if end_dt is not None and end_dt <= start_dt:
             end_dt = end_dt + timedelta(days=1)
         # Cap at midnight of the start day — events don't run overnight
@@ -231,7 +240,12 @@ def parse_events(csv_text):
 
     data_rows = reader[header_row_idx + 1:]
 
+    in_evening = False
     for row in data_rows:
+        # Detect "Evening" section marker in col 1
+        if len(row) > 1 and row[1].strip().lower() == 'evening':
+            in_evening = True
+
         for day_date, ev_col, time_col, where_col in DAY_COLUMNS:
             # Safely get cell values
             def cell(col):
@@ -248,7 +262,7 @@ def parse_events(csv_text):
             if title.lower() in ('event', 'title', 'session', 'activity'):
                 continue
 
-            start_dt, end_dt = parse_time_range(time_str, day_date)
+            start_dt, end_dt = parse_time_range(time_str, day_date, assume_pm=in_evening)
             dur = duration_minutes(start_dt, end_dt)
 
             events.append({
@@ -388,7 +402,32 @@ def import_events(session, events, room_map, submission_type_id, state, dry_run)
 
         if key in state['submissions']:
             info = state['submissions'][key]
-            print(f"  [skip] '{title}' already imported (code={info.get('code')})")
+            if info.get('scheduled'):
+                print(f"  [skip] '{title}' already imported and scheduled (code={info.get('code')})")
+                stats['skipped'] += 1
+                continue
+            # Submission exists but slot not yet scheduled — fall through to patch slot
+            code = info.get('code')
+            slot_id = info.get('slot')
+            if not code or not slot_id:
+                stats['skipped'] += 1
+                continue
+            print(f"\n  Event: '{title}' (retry slot patch, code={code}, slot={slot_id})")
+            patch_data = {}
+            room_id = room_map.get(location)
+            if room_id:
+                patch_data['room'] = room_id
+            if ev['start_dt']:
+                patch_data['start'] = fmt_dt(ev['start_dt'])
+            if patch_data:
+                patch_resp = api_patch(session, f'slots/{slot_id}/', patch_data)
+                if patch_resp.ok:
+                    print(f"    Slot scheduled: {patch_data.get('start')}")
+                    stats['slot_ok'] += 1
+                    info['scheduled'] = True
+                    save_state(state)
+                else:
+                    stats['errors'] += 1
             stats['skipped'] += 1
             continue
 
@@ -442,29 +481,24 @@ def import_events(session, events, room_map, submission_type_id, state, dry_run)
         slot_id = slots[0]['id']
         print(f"    Slot id={slot_id}")
 
-        # Build patch payload
+        # Build patch payload — end is derived from start + duration, don't set it
         patch_data = {}
         room_id = room_map.get(location)
         if room_id:
             patch_data['room'] = room_id
-
         if start_dt:
             patch_data['start'] = fmt_dt(start_dt)
-        if end_dt:
-            patch_data['end'] = fmt_dt(end_dt)
-        elif start_dt:
-            patch_data['end'] = fmt_dt(start_dt + timedelta(minutes=dur))
 
         if patch_data:
             patch_resp = api_patch(session, f'slots/{slot_id}/', patch_data)
             if patch_resp.ok:
-                print(f"    Slot scheduled: {patch_data.get('start')} → {patch_data.get('end')}")
+                print(f"    Slot scheduled: {patch_data.get('start')} (duration {dur} min)")
                 stats['slot_ok'] += 1
             else:
                 print(f"    WARNING: slot patch failed for slot {slot_id}")
                 stats['errors'] += 1
 
-        state['submissions'][key] = {'code': code, 'slot': slot_id}
+        state['submissions'][key] = {'code': code, 'slot': slot_id, 'scheduled': patch_data.get('start') is not None and patch_resp.ok if patch_data else False}
         save_state(state)
         stats['created'] += 1
 
