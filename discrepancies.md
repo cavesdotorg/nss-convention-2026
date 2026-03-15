@@ -106,3 +106,45 @@ These appear in the header rows (rows 1–4) and were skipped:
 ## 9. Vendor Hours Note (not an event)
 
 Row 4 contains: _"Vendors Schedule: Monday 8-5; Tues-Wed-Thursday 8 to 8; Friday 8-12"_ — this is a note in the schedule grid, not an event, and was not imported.
+
+---
+
+## 10. Conflicts Between Main Tab and Individual Day Tabs
+
+The spreadsheet has individual day tabs (Monday, Tuesday, Wednesday, Thursday, Thu+Fri) in addition to the main combined schedule tab that was imported. The following conflicts were found:
+
+### Room conflicts
+
+| Event | Day | Main tab | Day tab |
+|---|---|---|---|
+| BOG Open Meeting | Mon | Room 104 | Room 114 (Monday tab) |
+| BOG Lunch (Closed) | Mon | Room 104 | Room 114 (Monday tab) |
+| BOG Meeting (Closed) | Mon | Room 104 | Room 114 (Monday tab) |
+| BOG Meeting | Fri | Room 104 | _(no room listed)_ |
+| Discover Vertical Caving | Tue | Room 100 | "classroom close to gym" (Tuesday tab) |
+| Discover Vertical Caving | Wed | Room 100 | "classroom lecture & hands on in gym" (Wednesday tab) |
+
+Room 104 vs 114 for BOG sessions is a significant conflict — one of these is wrong. Room 100 may be a misassignment; day tabs indicate it should be a classroom near the gym, not a numbered room.
+
+### Time conflicts
+
+| Event | Day | Main tab | Day tab |
+|---|---|---|---|
+| Archeology | Thu | 1:00–5:00 (afternoon) | 9:00–Noon (morning), Room 205 (Thursday tab and Thu+Fri tab) |
+| NSS Awards Banquet | Fri | 6:30–8:30 | 7:00–9:30 (Thu+Fri tab) |
+
+Archeology is a major conflict — main tab places it in the afternoon with no room (TBD), but both Thursday-specific tabs place it in the morning in room 205.
+
+### Venue unresolved in day tabs
+
+| Event | Day | Main tab | Day tab |
+|---|---|---|---|
+| Caver Story Telling Contest | Thu | Windell Ag Building | "Where in campground?" (both Thursday tabs) |
+| Paleontology | Thu | TBD | No time or room listed at all (Thursday tab) |
+
+### Name/title conflicts
+
+| Event | Day | Main tab | Day tab |
+|---|---|---|---|
+| The Caving Podcast Live | Fri | Jason Ball**en**sky | Jason Ball**e**sky — missing letter (Thu+Fri tab) |
+| Vertical Section Lunch/Business Meeting | Thu | Vertical | "**Vetical** Section..." — typo in both Thursday tabs |
