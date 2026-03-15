@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#   "requests",
+#   "python-dotenv",
+# ]
+# ///
 """
 Import NSS 2026 schedule from Google Sheet into Pretalx.
 
 Usage:
-    PRETALX_TOKEN=<token> python import_schedule.py [--dry-run] [--skip-rooms] [--skip-submissions]
+    uv run import_schedule.py [--dry-run] [--skip-rooms] [--skip-submissions]
 """
 
 import argparse
@@ -14,12 +21,12 @@ import os
 import re
 import sys
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
 
-try:
-    import requests
-except ImportError:
-    print("ERROR: 'requests' library not found. Install with: pip install requests")
-    sys.exit(1)
+import requests
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent / "pretalx.env")
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -329,7 +336,7 @@ def get_all_pages(session, path, params=None):
             results.extend(data)
             break
         results.extend(data.get('results', []))
-        url = data.get('next')
+        url = (data.get('next') or '').replace('http://', 'https://') or None
         params = None  # next URL already has params
     return results
 

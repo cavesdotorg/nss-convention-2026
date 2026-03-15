@@ -1,21 +1,28 @@
 #!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.11"
+# dependencies = [
+#   "requests",
+#   "python-dotenv",
+# ]
+# ///
 """
 Create tracks in Pretalx and assign sessions to them based on title keywords.
 
 Usage:
-    PRETALX_TOKEN=<token> python assign_tracks.py [--dry-run]
+    uv run assign_tracks.py [--dry-run]
 """
 
 import json
 import os
 import re
 import sys
+from pathlib import Path
 
-try:
-    import requests
-except ImportError:
-    print("ERROR: 'requests' library not found. Install with: pip install requests")
-    sys.exit(1)
+import requests
+from dotenv import load_dotenv
+
+load_dotenv(Path(__file__).parent / "pretalx.env")
 
 API_BASE = "https://talks.caving.dev/api/events/nss-convention-2026"
 STATE_FILE = os.path.join(os.path.dirname(__file__), "import_state.json")
