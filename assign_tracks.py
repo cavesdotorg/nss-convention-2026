@@ -63,20 +63,24 @@ TRACKS = [
         r"archeology",
         r"speleophilatelic",
     ]),
+    ("Cave Digging", "#4E342E", [  # dark brown
+        r"cave digging",
+    ]),
     ("Survey & Cartography", "#0D47A1", [  # very dark blue
         r"survey\s*&\s*cartography",
         r"introduction to sketching",
         r"in-cave sketching",
         r"state cave surveys",
-        r"cave digging section",
         r"cartographic salon",
         r"sketching contest",
+    ]),
+    ("Cave Rescue", "#B71C1C", [  # dark crimson
+        r"ncrc",
     ]),
     ("Conservation", "#00695C", [  # dark teal
         r"cave conservation",
         r"speleothem repair",
         r"cave conservancy roundtable",
-        r"ncrc annual meeting",
         r"carlsbad caverns listening",
         r"nss preserves",
     ]),
@@ -116,6 +120,9 @@ TRACKS = [
         r"convention planning",
         r"convention debrief",
     ]),
+    ("Electronics & Communications", "#1A237E", [  # dark indigo
+        r"communications\s*&?\s*elect",
+    ]),
     ("Social & Events", "#6A1B9A", [  # dark violet (distinct from red/blue/green tracks)
         r"opening ceremony",
         r"howdy party",
@@ -129,9 +136,8 @@ TRACKS = [
         r"coffee\s*&\s*karst",
         r"book signing",
         r"arts and letters lunch",
-        r"communications\s*&?\s*elect",
     ]),
-    ("Speakers", "#33691E", [  # dark olive green
+    ("Luminary & Featured Speakers", "#33691E", [  # dark olive green
         r"luminary speaker",
         r"featured speaker",
     ]),
