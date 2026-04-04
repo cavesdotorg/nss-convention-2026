@@ -44,8 +44,6 @@
       font-weight: 600;
       white-space: nowrap;
       box-shadow: 0 1px 3px rgba(0,0,0,0.25);
-      transform: translate(-50%, -50%);
-      position: relative;
       display: inline-block;
     }
 
@@ -972,7 +970,7 @@ attractions.forEach(a => {
     </div>`;
   const icon = L.divIcon({
     className: "",
-    html: `<span class="attraction-label" style="color:${style.color};border-color:${style.color}">${a.name}</span>`,
+    html: `<div style="transform:translate(-50%,-50%)"><span class="attraction-label" style="color:${style.color};border-color:${style.color}">${a.name}</span></div>`,
     iconAnchor: [0, 0],
   });
   L.marker([a.lat, a.lng], { icon })
