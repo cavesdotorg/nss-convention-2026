@@ -1021,6 +1021,7 @@ function makeTerrainColormap() {
 
 const colorReliefKY = L.esri.imageMapLayer({
   url: "https://kyraster.ky.gov/arcgis/rest/services/ElevationServices/Ky_DEM_KYAPED_2FT_Phase3_WGS84WM/ImageServer",
+  usePost: true,
   renderingRule: {
     rasterFunction: "Colormap",
     rasterFunctionArguments: {
