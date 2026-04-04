@@ -882,13 +882,41 @@ const venues = [
   },
 ];
 
-const map = L.map("map").setView([38.197, -86.128], 14);
+const attractions = [
+  // Caves
+  { name: "Squire Boone Caverns", url: "https://squireboonecaverns.com/", note: "Historic cave with tours, ~18 mi from Corydon", lat: 38.1601, lng: -86.2257, cat: "cave" },
+  { name: "Marengo Cave", url: "http://marengocave.com/", note: "National Landmark cave with guided tours, ~25 mi", lat: 38.3734, lng: -86.3450, cat: "cave" },
+  { name: "Wyandotte Cave (O'Bannon Woods SP)", url: "https://www.in.gov/dnr/state-parks/parks-lakes/obannon-woods-state-park/", note: "Indiana's longest cave + state park, ~15 mi", lat: 38.2614, lng: -86.2356, cat: "cave" },
+  { name: "Louisville MegaCavern", url: "https://louisvillemegacavern.com/", note: "Former limestone mine under Louisville, ~35 mi", lat: 38.2543, lng: -85.7592, cat: "cave" },
+  { name: "Mammoth Cave National Park", url: "https://www.nps.gov/places/mammoth-cave-national-park.htm", note: "World's longest known cave system, ~85 mi", lat: 37.1864, lng: -86.0997, cat: "cave" },
+  // Parks & Nature
+  { name: "O'Bannon Woods State Park", url: "https://www.in.gov/dnr/state-parks/parks-lakes/obannon-woods-state-park/", note: "Harrison County state park with trails & camping", lat: 38.2820, lng: -86.2386, cat: "park" },
+  { name: "Clifty Falls State Park", url: "https://www.in.gov/dnr/state-parks/parks-lakes/clifty-falls-state-park/", note: "Waterfalls & scenic canyon, ~45 mi", lat: 38.7456, lng: -85.4164, cat: "park" },
+  { name: "Falls of the Ohio State Park", url: "https://fallsoftheohio.org/", note: "Ancient fossil beds on the Ohio River, ~40 mi", lat: 38.2788, lng: -85.7817, cat: "park" },
+  // Wineries
+  { name: "Turtle Run Winery", url: "https://turtlerunwinery.com/", note: "Local winery in Corydon, IN", lat: 38.2151, lng: -86.1318, cat: "winery" },
+  { name: "Huber's Orchard & Winery", url: "https://visithubers.com/", note: "Orchard, winery & distillery in Borden, IN, ~25 mi", lat: 38.4289, lng: -85.8578, cat: "winery" },
+  // Entertainment
+  { name: "Caesars Southern Indiana", url: "https://www.caesars.com/caesars-southern-indiana", note: "Casino resort in Elizabeth, IN, ~15 mi", lat: 38.1213, lng: -85.9647, cat: "other" },
+  { name: "Holiday World & Splashin' Safari", url: "https://holidayworld.com/", note: "Amusement park in Santa Claus, IN, ~40 mi", lat: 38.1076, lng: -86.9167, cat: "other" },
+  { name: "French Lick Resort", url: "https://www.frenchlick.com/", note: "Historic resort & casino in French Lick, IN, ~45 mi", lat: 38.5498, lng: -86.6202, cat: "other" },
+];
+
+const catStyle = {
+  cave:   { color: "#5D3A1A", label: "Cave / Cavern" },
+  park:   { color: "#2E7D32", label: "State Park / Nature" },
+  winery: { color: "#880E4F", label: "Winery" },
+  other:  { color: "#37474F", label: "Attraction" },
+};
+
+const map = L.map("map").setView([38.197, -86.128], 11);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   maxZoom: 19,
 }).addTo(map);
 
+const venueLayer = L.layerGroup();
 venues.forEach(v => {
   const popup = `
     <div style="min-width:240px;max-width:300px">
@@ -906,8 +934,36 @@ venues.forEach(v => {
     fillOpacity: 0.9,
   })
   .bindPopup(popup, { maxWidth: 320, maxHeight: 400 })
-  .addTo(map);
+  .addTo(venueLayer);
 });
+venueLayer.addTo(map);
+
+const attractionLayer = L.layerGroup();
+attractions.forEach(a => {
+  const style = catStyle[a.cat];
+  const popup = `
+    <div style="min-width:200px;max-width:280px">
+      <div class="popup-title">${a.name}</div>
+      <div class="popup-note">${a.note}</div>
+      <a href="${a.url}" target="_blank" style="font-size:12px;color:#1565C0">Visit website &rarr;</a>
+    </div>`;
+  L.circleMarker([a.lat, a.lng], {
+    radius: 8,
+    fillColor: style.color,
+    color: "white",
+    weight: 2,
+    opacity: 0.8,
+    fillOpacity: 0.7,
+  })
+  .bindPopup(popup, { maxWidth: 300 })
+  .addTo(attractionLayer);
+});
+attractionLayer.addTo(map);
+
+L.control.layers(null, {
+  "Convention Venues": venueLayer,
+  "Local Attractions": attractionLayer,
+}, { position: "topleft", collapsed: false }).addTo(map);
 
 const legend = L.control({ position: "topright" });
 legend.onAdd = () => {
@@ -915,9 +971,15 @@ legend.onAdd = () => {
   div.innerHTML = `
     <h3>NSS Convention 2026</h3>
     <div style="font-size:11px;color:#666;margin-bottom:6px">Corydon, IN &middot; July 6&ndash;10</div>
+    <div style="font-size:11px;font-weight:700;color:#444;margin:6px 0 3px">Convention Venues</div>
     <div class="legend-item"><div class="legend-dot" style="background:#1565C0"></div>School Campus / Gym</div>
     <div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div>Fairgrounds</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#4E342E"></div>Indiana Caverns</div>`;
+    <div class="legend-item"><div class="legend-dot" style="background:#4E342E"></div>Indiana Caverns</div>
+    <div style="font-size:11px;font-weight:700;color:#444;margin:8px 0 3px">Local Attractions</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#5D3A1A;opacity:0.7"></div>Cave / Cavern</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#2E7D32;opacity:0.7"></div>State Park / Nature</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#880E4F;opacity:0.7"></div>Winery</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#37474F;opacity:0.7"></div>Attraction</div>`;
   return div;
 };
 legend.addTo(map);
