@@ -986,7 +986,7 @@ const cycleLayer = L.tileLayer("https://{s}.tile-cyclosm.openstreetmap.fr/cyclos
 });
 
 L.control.layers(
-  { "Street Map": osmLayer, "CyclOSM": cycleLayer },
+  { "Street Map": osmLayer, "Topo": cycleLayer },
   { "Convention Venues": venueLayer, "Local Attractions": attractionLayer },
   { position: "topleft", collapsed: false }
 ).addTo(map);
