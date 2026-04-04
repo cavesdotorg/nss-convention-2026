@@ -985,11 +985,17 @@ const cycleLayer = L.tileLayer("https://{s}.tile-cyclosm.openstreetmap.fr/cyclos
   maxZoom: 20,
 });
 
-L.control.layers(
+const layerControl = L.control.layers(
   { "Street Map": osmLayer, "Topo": cycleLayer },
   { "Convention Venues": venueLayer, "Local Attractions": attractionLayer },
   { position: "topleft", collapsed: false }
-).addTo(map);
+);
+layerControl.addTo(map);
+layerControl.getContainer().insertAdjacentHTML("beforeend",
+  `<div style="padding:4px 10px 6px;font-size:11px;color:#555;border-top:1px solid #ddd;margin-top:4px">
+    High-res Mammoth Cave terrain:<br>
+    <a href="https://terrain.mapcram.com/" target="_blank" style="color:#1565C0">terrain.mapcram.com</a>
+  </div>`);
 
 const legend = L.control({ position: "topright" });
 legend.onAdd = () => {
