@@ -1,0 +1,299 @@
+- generic [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#fl-main-content"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - navigation "Navigation Menu" [ref=e14]:
+        - list [ref=e15]:
+          - listitem [ref=e16]:
+            - link "Member Page / Login" [ref=e17] [cursor=pointer]:
+              - /url: https://caves.org/member-page/
+          - listitem [ref=e18]:
+            - link "Contact" [ref=e19] [cursor=pointer]:
+              - /url: https://caves.org/contact/
+          - text: 
+      - generic [ref=e23]:
+        - figure [ref=e26]:
+          - link "National Speleological Society Logo" [ref=e28] [cursor=pointer]:
+            - /url: https://caves.org/
+            - img "National Speleological Society Logo" [ref=e29]
+        - generic [ref=e34]:
+          - button "Menu" [ref=e35] [cursor=pointer]:
+            - img [ref=e37]
+          - navigation "Navigation Menu"
+    - main [ref=e41]:
+      - article [ref=e45]:
+        - generic [ref=e47]:
+          - generic [ref=e51]:
+            - figure [ref=e54]:
+              - link "Solid Colors" [ref=e56] [cursor=pointer]:
+                - /url: https://caves.org/convention/2026-nss-convention/
+                - img "Solid Colors" [ref=e57]
+            - generic [ref=e60]:
+              - heading "2026 NSS Convention" [level=1] [ref=e61]
+              - heading "Hundreds of Caves, Hundreds of Miles" [level=2] [ref=e62]
+              - paragraph [ref=e63]: Corydon, IN - July 6 - July 10, 2026
+          - generic [ref=e66]:
+            - generic [ref=e67]:
+              - generic [ref=e69]:
+                - generic [ref=e71]:
+                  - generic:
+                    - generic:
+                      - link "Register":
+                        - /url: https://caves.org/convention/2026-nss-convention/registration/
+                        - generic [ref=e72] [cursor=pointer]: Register
+                - paragraph [ref=e74]:
+                  - link "Registration & add-ons" [ref=e75] [cursor=pointer]:
+                    - /url: https://caves.org/convention/2026-nss-convention/registration/
+                    - text: Registration
+                    - text: "& add-ons"
+              - generic [ref=e77]:
+                - generic [ref=e81]:
+                  - link "Register":
+                    - /url: https://caves.org/convention/2026-nss-convention/lodging/
+                    - generic [ref=e82] [cursor=pointer]: 
+                    - generic [ref=e83] [cursor=pointer]: Register
+                - paragraph [ref=e85]:
+                  - link "Lodging / Camping" [ref=e86] [cursor=pointer]:
+                    - /url: https://caves.org/convention/2026-nss-convention/lodging/
+              - generic [ref=e88]:
+                - generic [ref=e92]:
+                  - link "Register":
+                    - /url: https://caves.org/convention/2026-nss-convention/schedule/
+                    - generic [ref=e93] [cursor=pointer]: 
+                    - generic [ref=e94] [cursor=pointer]: Register
+                - paragraph [ref=e96]:
+                  - link "Schedule / Sessions" [ref=e97] [cursor=pointer]:
+                    - /url: https://caves.org/convention/2026-nss-convention/schedule/
+              - generic [ref=e99]:
+                - generic [ref=e103]:
+                  - link "Register":
+                    - /url: https://caves.org/convention/2026-nss-convention/activities/
+                    - generic [ref=e104] [cursor=pointer]: 
+                    - generic [ref=e105] [cursor=pointer]: Register
+                - paragraph [ref=e107]:
+                  - link "Caving / Activities" [ref=e108] [cursor=pointer]:
+                    - /url: https://caves.org/convention/2026-nss-convention/activities/
+              - generic [ref=e110]:
+                - generic [ref=e114]:
+                  - link "Register":
+                    - /url: https://caves.org/convention/2026-nss-convention/news/
+                    - generic [ref=e115] [cursor=pointer]: 
+                    - generic [ref=e116] [cursor=pointer]: Register
+                - paragraph [ref=e118]:
+                  - link "Convention News" [ref=e119] [cursor=pointer]:
+                    - /url: https://caves.org/convention/2026-nss-convention/news/
+                    - text: Convention
+                    - text: News
+              - generic [ref=e121]:
+                - generic [ref=e125]:
+                  - link "Register":
+                    - /url: https://caves.org/convention/2026-nss-convention/attendees/
+                    - generic [ref=e126] [cursor=pointer]: 
+                    - generic [ref=e127] [cursor=pointer]: Register
+                - paragraph [ref=e129]:
+                  - link "Who's Coming" [ref=e130] [cursor=pointer]:
+                    - /url: https://caves.org/convention/2026-nss-convention/attendees/
+                    - text: Who's
+                    - text: Coming
+            - generic [ref=e134]:
+              - link "Local Attractions" [ref=e135] [cursor=pointer]:
+                - /url: /convention/2026-nss-convention/local-attractions/
+              - text: "|"
+              - link "Local Services" [ref=e136] [cursor=pointer]:
+                - /url: /convention/2026-nss-convention/resources/
+              - text: "|"
+              - link "Junior Speleological Society" [ref=e137] [cursor=pointer]:
+                - /url: /convention/2026-nss-convention/jss/
+              - text: "|"
+              - link "Know Before You Go" [ref=e138] [cursor=pointer]:
+                - /url: /convention/2026-nss-convention/faq/
+          - heading "Caving and Activities" [level=2] [ref=e146]
+          - generic [ref=e152]:
+            - heading "Field Trips:" [level=3] [ref=e153]
+            - generic [ref=e156]:
+              - generic [ref=e158] [cursor=pointer]:
+                - heading "Geology Field Trip" [level=2] [ref=e159]
+                - button " Collapse" [ref=e366]:
+                  - generic [ref=e161]:
+                    - text: 
+                    - generic [ref=e162]: Collapse
+              - generic [ref=e164] [cursor=pointer]:
+                - heading "Biology Field Trip" [level=2] [ref=e165]
+                - button " Collapse" [ref=e377]:
+                  - generic [ref=e167]:
+                    - text: 
+                    - generic [ref=e168]: Collapse
+              - generic [ref=e170] [cursor=pointer]:
+                - heading "Wyandotte Cave Trip" [level=2] [ref=e171]
+                - button " Collapse" [ref=e386]:
+                  - generic [ref=e173]:
+                    - text: 
+                    - generic [ref=e174]: Collapse
+              - generic [ref=e175]:
+                - generic [ref=e176] [cursor=pointer]:
+                  - heading "Blue River Float Trip" [level=2] [ref=e177]
+                  - button " Collapse" [expanded] [ref=e387]:
+                    - generic [ref=e179]:
+                      - text: 
+                      - generic [ref=e180]: Collapse
+                - region "Blue River Float Trip" [ref=e388]:
+                  - paragraph [ref=e389]: "Description:"
+                  - paragraph [ref=e390]: Details to come!
+                  - paragraph [ref=e391]: "Trip Max: TBD"
+                  - paragraph [ref=e392]: "Date: TBD"
+                  - paragraph [ref=e393]: "Fee: TBD"
+            - heading "Workshops:" [level=3] [ref=e181]
+            - generic [ref=e184]:
+              - generic [ref=e186] [cursor=pointer]:
+                - heading "Discover Vertical Caving" [level=2] [ref=e187]
+                - button " Collapse" [ref=e409]:
+                  - generic [ref=e189]:
+                    - text: 
+                    - generic [ref=e190]: Collapse
+              - generic [ref=e192] [cursor=pointer]:
+                - heading "Speleothem Repair" [level=2] [ref=e193]
+                - button " Collapse" [ref=e423]:
+                  - generic [ref=e195]:
+                    - text: 
+                    - generic [ref=e196]: Collapse
+              - generic [ref=e198] [cursor=pointer]:
+                - heading "Cave Photography" [level=2] [ref=e199]
+                - button " Collapse" [ref=e431]:
+                  - generic [ref=e201]:
+                    - text: 
+                    - generic [ref=e202]: Collapse
+              - generic [ref=e204] [cursor=pointer]:
+                - heading "Sketching Workshop" [level=2] [ref=e205]
+                - button " Collapse" [ref=e439]:
+                  - generic [ref=e207]:
+                    - text: 
+                    - generic [ref=e208]: Collapse
+              - generic [ref=e210] [cursor=pointer]:
+                - heading "Speleology for Cavers" [level=2] [ref=e211]
+                - button " Collapse" [ref=e450]:
+                  - generic [ref=e213]:
+                    - text: 
+                    - generic [ref=e214]: Collapse
+              - generic [ref=e215]:
+                - generic [ref=e216] [cursor=pointer]:
+                  - heading "Contingency Considerations in Caving Workshop" [level=2] [ref=e217]
+                  - button " Collapse" [expanded] [active] [ref=e451]:
+                    - generic [ref=e219]:
+                      - text: 
+                      - generic [ref=e220]: Collapse
+                - region "Contingency Considerations in Caving Workshop" [ref=e452]:
+                  - paragraph [ref=e453]: "Description:"
+                  - paragraph [ref=e454]: Even the most experienced caving teams can encounter unexpected mishaps. Sharpen your technical skills and learn to prevent and overcome problems underground. This hands-on clinic covers a variety of topics including contingency rigging, improvised vertical systems, traveling haul systems, converting a loaded line to lower a person who is stuck on rope, and basic medical considerations. These techniques are all possible with a small caving party using minimal gear that can be carried on caving trips. By preventing and preparing for common caving-related problems, students are empowered to solve common issues they may encounter while caving.
+                  - paragraph [ref=e455]: "What to expect: After a short introduction, the class will work through SRT system optimization then break into 5 groups to rotate through each of 5 stations, These stations will cover various self-rescue topics including contingency rigging, improvised vertical systems, traveling haul systems, converting a loaded line to lower a person who is stuck on rope, and basic medical considerations."
+                  - paragraph [ref=e456]: "Prerequisites: Basic vertical competency"
+                  - paragraph [ref=e457]: "Equipment needed: Personal SRT system, helmet, and gloves. Wear clothes that you are comfortable climbing rope in, and closed toed shoes."
+                  - paragraph [ref=e458]: Pre-Registration is required and available on our "Register" link
+                  - paragraph [ref=e459]:
+                    - text: Organized by Stephanie Suen
+                    - text: Contact
+                    - link "ssuen@caves.org" [ref=e460] [cursor=pointer]:
+                      - /url: mailto:ssuen@caves.org
+                  - paragraph [ref=e461]: Proceeds to benefit NCRC and VTC gear caches
+                  - paragraph [ref=e462]:
+                    - link "Register for session" [ref=e463] [cursor=pointer]:
+                      - /url: https://caves.org/product/contingency-considerations-in-caving-workshop/
+                  - paragraph [ref=e464]: "Trip Max: 25"
+                  - paragraph [ref=e465]: "Date: HALF DAY Thursday, July 9, 2026 8AM-12PM"
+                  - paragraph [ref=e466]: "Fee: $26"
+            - heading "Other:" [level=3] [ref=e221]
+            - generic [ref=e224]:
+              - generic [ref=e226] [cursor=pointer]:
+                - heading "Cave Central" [level=2] [ref=e227]
+                - button " Expand" [ref=e228]:
+                  - generic [ref=e229]:
+                    - text: 
+                    - generic [ref=e230]: Expand
+              - generic [ref=e232] [cursor=pointer]:
+                - heading "Junior Speleological Society" [level=2] [ref=e233]
+                - button " Expand" [ref=e234]:
+                  - generic [ref=e235]:
+                    - text: 
+                    - generic [ref=e236]: Expand
+              - generic [ref=e238] [cursor=pointer]:
+                - heading "Sketching Contest" [level=2] [ref=e239]
+                - button " Expand" [ref=e240]:
+                  - generic [ref=e241]:
+                    - text: 
+                    - generic [ref=e242]: Expand
+              - generic [ref=e244] [cursor=pointer]:
+                - heading "Morning Caver Yoga" [level=2] [ref=e245]
+                - button " Expand" [ref=e246]:
+                  - generic [ref=e247]:
+                    - text: 
+                    - generic [ref=e248]: Expand
+    - generic [ref=e254]:
+      - figure [ref=e260]:
+        - img "Lake-Castrolova-Eginoire" [ref=e262]
+      - generic [ref=e264]:
+        - generic [ref=e266]:
+          - heading "join nss" [level=3] [ref=e269]
+          - paragraph [ref=e273]: With over 8,000 Members the NSS is the largest caving focused membership organization in the world. Find out why you belong.
+          - link "Join" [ref=e277] [cursor=pointer]:
+            - /url: https://caves.org/join-us/
+        - generic [ref=e279]:
+          - heading "Support" [level=3] [ref=e282]
+          - paragraph [ref=e286]: Donations to the NSS help support programs advancing cave science, preservation, exploration, and education. Find out how you can help.
+          - link "Donate" [ref=e290] [cursor=pointer]:
+            - /url: https://members.caves.org/general/custom.asp?page=donate
+        - generic [ref=e292]:
+          - heading "Get Involved" [level=3] [ref=e295]
+          - paragraph [ref=e299]: The heart and soul of the NSS is our volunteers. Find out how you can get involved and help promote caving science, exploration and preservation.
+          - link "Volunteer" [ref=e303] [cursor=pointer]:
+            - /url: https://caves.org/volunteer/
+    - contentinfo [ref=e304]:
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - generic [ref=e310]:
+            - heading "NATIONAL SPELEOLOGICAL SOCIETY" [level=4] [ref=e313]
+            - generic [ref=e316]:
+              - paragraph [ref=e317]:
+                - text: 6001 Pulaski Pike
+                - text: Huntsville, AL 35810-1122 USA
+                - text: (256) 852-1300
+              - paragraph [ref=e318]: nss@caves.org
+            - generic [ref=e321]:
+              - generic [ref=e322]:
+                - link:
+                  - /url: https://www.facebook.com/NationalSpeleologicalSociety
+                  - generic [ref=e323] [cursor=pointer]: 
+              - generic [ref=e324]:
+                - link:
+                  - /url: https://www.youtube.com/c/NationalSpeleologicalSociety/featured
+                  - generic [ref=e325] [cursor=pointer]: 
+              - generic [ref=e326]:
+                - link:
+                  - /url: https://twitter.com/NSScaves
+                  - generic [ref=e327] [cursor=pointer]: 
+              - generic [ref=e328]:
+                - link:
+                  - /url: https://www.linkedin.com/groups/106900/
+                  - generic [ref=e329] [cursor=pointer]: 
+              - generic [ref=e330]:
+                - link:
+                  - /url: https://www.instagram.com/nsscaves/?hl=en
+                  - generic [ref=e331] [cursor=pointer]: 
+              - generic [ref=e332]:
+                - link:
+                  - /url: https://www.pinterest.com/nsscaves/
+                  - generic [ref=e333] [cursor=pointer]: 
+          - navigation "Navigation Footer Secondary Menu" [ref=e339]:
+            - list [ref=e340]:
+              - listitem [ref=e341]:
+                - link "Contact" [ref=e342] [cursor=pointer]:
+                  - /url: https://caves.org/contact/
+              - listitem [ref=e343]:
+                - link "Photographers & Cartographers" [ref=e344] [cursor=pointer]:
+                  - /url: https://caves.org/photographers-cartographers/
+              - listitem [ref=e345]:
+                - link "Privacy Policy" [ref=e346] [cursor=pointer]:
+                  - /url: https://caves.org/privacy-policy/
+              - listitem [ref=e347]:
+                - link "Open Positions" [ref=e348] [cursor=pointer]:
+                  - /url: https://caves.org/open-positions/
+        - paragraph [ref=e355]: ©Copyright National Speleological Society, 1995 - 2026. NSS & the logo are registered® trademarks
