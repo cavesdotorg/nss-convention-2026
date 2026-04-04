@@ -19,7 +19,16 @@
       font-size: 13px;
       line-height: 1.6;
     }
-    .legend h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .legend-header {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      cursor: pointer; user-select: none;
+    }
+    .legend h3 { font-size: 14px; font-weight: 700; margin: 0; }
+    .legend-toggle {
+      font-size: 12px; color: #888; flex-shrink: 0;
+      background: none; border: none; cursor: pointer; padding: 0; line-height: 1;
+    }
+    .legend-body { margin-top: 4px; }
     .legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
     .legend-dot {
       width: 13px; height: 13px; border-radius: 50%; flex-shrink: 0;
@@ -969,17 +978,33 @@ const legend = L.control({ position: "topright" });
 legend.onAdd = () => {
   const div = L.DomUtil.create("div", "legend");
   div.innerHTML = `
-    <h3>NSS Convention 2026</h3>
-    <div style="font-size:11px;color:#666;margin-bottom:6px">Corydon, IN &middot; July 6&ndash;10</div>
-    <div style="font-size:11px;font-weight:700;color:#444;margin:6px 0 3px">Convention Venues</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#1565C0"></div>School Campus / Gym</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div>Fairgrounds</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#4E342E"></div>Indiana Caverns</div>
-    <div style="font-size:11px;font-weight:700;color:#444;margin:8px 0 3px">Local Attractions</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#5D3A1A;opacity:0.7"></div>Cave / Cavern</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#2E7D32;opacity:0.7"></div>State Park / Nature</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#880E4F;opacity:0.7"></div>Winery</div>
-    <div class="legend-item"><div class="legend-dot" style="background:#37474F;opacity:0.7"></div>Attraction</div>`;
+    <div class="legend-header" id="legend-header">
+      <h3>NSS Convention 2026</h3>
+      <button class="legend-toggle" id="legend-toggle" title="Toggle legend">&#x25B2;</button>
+    </div>
+    <div class="legend-body" id="legend-body">
+      <div style="font-size:11px;color:#666;margin-bottom:6px">Corydon, IN &middot; July 6&ndash;10</div>
+      <div style="font-size:11px;font-weight:700;color:#444;margin:6px 0 3px">Convention Venues</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1565C0"></div>School Campus / Gym</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div>Fairgrounds</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#4E342E"></div>Indiana Caverns</div>
+      <div style="font-size:11px;font-weight:700;color:#444;margin:8px 0 3px">Local Attractions</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#5D3A1A;opacity:0.7"></div>Cave / Cavern</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#2E7D32;opacity:0.7"></div>State Park / Nature</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#880E4F;opacity:0.7"></div>Winery</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#37474F;opacity:0.7"></div>Attraction</div>
+    </div>`;
+
+  L.DomEvent.disableClickPropagation(div);
+
+  div.querySelector("#legend-header").addEventListener("click", () => {
+    const body = div.querySelector("#legend-body");
+    const btn = div.querySelector("#legend-toggle");
+    const collapsed = body.style.display === "none";
+    body.style.display = collapsed ? "" : "none";
+    btn.innerHTML = collapsed ? "&#x25B2;" : "&#x25BC;";
+  });
+
   return div;
 };
 legend.addTo(map);
