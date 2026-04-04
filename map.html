@@ -986,52 +986,13 @@ const hillshadeIN = L.esri.imageMapLayer({
   renderingRule: { rasterFunction: "GrayscaleHillshade" },
   opacity: 0.5,
 });
-const colorReliefIN = L.esri.imageMapLayer({
-  url: "https://di-ingov.img.arcgis.com/arcgis/rest/services/DynamicWebMercator/Indiana_2016_2020_DEM/ImageServer",
-  renderingRule: { rasterFunction: "Indiana Shaded Relief" },
-  opacity: 0.6,
-});
 const hillshadeKY = L.esri.imageMapLayer({
   url: "https://kyraster.ky.gov/arcgis/rest/services/ElevationServices/Ky_DEM_KYAPED_2FT_Phase3_Hillshade_WGS84WM/ImageServer",
   opacity: 0.5,
 });
-// Terrain colormap: 256 entries, low=green, mid=tan, high=white
-function makeTerrainColormap() {
-  const stops = [
-    [0,   [60,  130, 80]],   // dark green (low)
-    [80,  [120, 170, 90]],   // mid green
-    [140, [200, 210, 130]],  // yellow-green
-    [180, [210, 185, 120]],  // tan
-    [210, [180, 140, 90]],   // brown
-    [235, [160, 120, 80]],   // dark brown
-    [255, [220, 210, 200]],  // near white (high)
-  ];
-  function lerp(a, b, t) { return Math.round(a + (b - a) * t); }
-  const cm = [];
-  for (let i = 0; i <= 255; i++) {
-    let lo = stops[0], hi = stops[stops.length - 1];
-    for (let s = 0; s < stops.length - 1; s++) {
-      if (i >= stops[s][0] && i <= stops[s + 1][0]) { lo = stops[s]; hi = stops[s + 1]; break; }
-    }
-    const t = lo[0] === hi[0] ? 0 : (i - lo[0]) / (hi[0] - lo[0]);
-    cm.push([i, lerp(lo[1][0], hi[1][0], t), lerp(lo[1][1], hi[1][1], t), lerp(lo[1][2], hi[1][2], t)]);
-  }
-  return cm;
-}
-
-const colorReliefKY = L.esri.imageMapLayer({
-  url: "https://kyraster.ky.gov/arcgis/rest/services/ElevationServices/Ky_DEM_KYAPED_2FT_Phase3_WGS84WM/ImageServer",
-  usePost: true,
-  renderingRule: {
-    rasterFunction: "Colormap",
-    rasterFunctionArguments: {
-      raster: {
-        rasterFunction: "Stretch",
-        rasterFunctionArguments: { StretchType: 3, Min: 0, Max: 255 },
-      },
-      colormap: makeTerrainColormap(),
-    },
-  },
+const colorRelief = L.esri.imageMapLayer({
+  url: "https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer",
+  renderingRule: { rasterFunction: "Hillshade Elevation Tinted" },
   opacity: 0.6,
 });
 
@@ -1039,9 +1000,8 @@ L.control.layers(
   { "Street Map": osmLayer },
   {
     "Hillshade IN (LiDAR)": hillshadeIN,
-    "Color Relief IN": colorReliefIN,
     "Hillshade KY (LiDAR)": hillshadeKY,
-    "Color Relief KY": colorReliefKY,
+    "Color Relief (USGS 3DEP)": colorRelief,
     "Convention Venues": venueLayer,
     "Local Attractions": attractionLayer,
   },
