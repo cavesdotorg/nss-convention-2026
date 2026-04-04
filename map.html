@@ -6,6 +6,7 @@
   <title>NSS Convention 2026 — Venue Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/esri-leaflet@3.0.12/dist/esri-leaflet.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: sans-serif; }
@@ -984,9 +985,15 @@ attractions.forEach(a => {
 });
 attractionLayer.addTo(map);
 
+const hillshadeLayer = L.esri.imageMapLayer({
+  url: "https://di-ingov.img.arcgis.com/arcgis/rest/services/DynamicWebMercator/Indiana_2016_2020_DEM/ImageServer",
+  renderingRule: { rasterFunction: "GrayscaleHillshade" },
+  opacity: 0.5,
+});
+
 L.control.layers(
   { "Street Map": osmLayer, "Topo / Hillshade": topoLayer },
-  { "Convention Venues": venueLayer, "Local Attractions": attractionLayer },
+  { "Hillshade (IN LiDAR)": hillshadeLayer, "Convention Venues": venueLayer, "Local Attractions": attractionLayer },
   { position: "topleft", collapsed: false }
 ).addTo(map);
 
