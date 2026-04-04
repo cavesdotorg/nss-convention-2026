@@ -997,7 +997,12 @@ const hillshadeKY = L.esri.imageMapLayer({
 });
 const colorReliefKY = L.esri.imageMapLayer({
   url: "https://kyraster.ky.gov/arcgis/rest/services/ElevationServices/Ky_DEM_KYAPED_2FT_Phase3_WGS84WM/ImageServer",
-  renderingRule: { rasterFunction: "ShadedRelief" },
+  renderingRule: {
+    rasterFunction: "Colormap",
+    rasterFunctionArguments: {
+      colorRampName: "Elevation #1",
+    },
+  },
   opacity: 0.6,
 });
 
