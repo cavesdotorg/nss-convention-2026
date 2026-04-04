@@ -990,10 +990,14 @@ const hillshadeKY = L.esri.imageMapLayer({
   url: "https://kyraster.ky.gov/arcgis/rest/services/ElevationServices/Ky_DEM_KYAPED_2FT_Phase3_Hillshade_WGS84WM/ImageServer",
   opacity: 0.5,
 });
+const imageryKY = L.tileLayer(
+  "https://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_Imagery_Phase3_3IN_WGS84WM/MapServer/tile/{z}/{y}/{x}",
+  { attribution: "KyFromAbove / Kentucky DGI", maxZoom: 20, opacity: 0.7 }
+);
 
 L.control.layers(
   { "Street Map": osmLayer },
-  { "Hillshade IN (LiDAR)": hillshadeIN, "Hillshade KY (LiDAR)": hillshadeKY, "Convention Venues": venueLayer, "Local Attractions": attractionLayer },
+  { "Hillshade IN (LiDAR)": hillshadeIN, "Hillshade KY (LiDAR)": hillshadeKY, "Aerial Imagery KY (3in)": imageryKY, "Convention Venues": venueLayer, "Local Attractions": attractionLayer },
   { position: "topleft", collapsed: false }
 ).addTo(map);
 
