@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NSS Convention 2026 — Venue Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: sans-serif; }
+    #map { width: 100vw; height: 100vh; }
+
+    .legend {
+      background: white;
+      padding: 12px 16px;
+      border-radius: 6px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .legend h3 { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+    .legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+    .legend-dot {
+      width: 13px; height: 13px; border-radius: 50%; flex-shrink: 0;
+      border: 2px solid white; box-shadow: 0 0 0 1px #aaa;
+    }
+
+    .popup-title { font-weight: 700; font-size: 14px; margin-bottom: 4px; }
+    .popup-note { font-size: 11px; color: #666; margin-bottom: 8px; font-style: italic; }
+
+    .day-group { margin-bottom: 10px; }
+    .day-label {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      color: #555; margin-bottom: 4px; letter-spacing: 0.03em;
+    }
+    .session-link {
+      display: block;
+      font-size: 12px;
+      color: #1565C0;
+      text-decoration: none;
+      padding: 2px 0 2px 8px;
+      border-left: 2px solid #ddd;
+      margin-bottom: 2px;
+      line-height: 1.4;
+    }
+    .session-link:hover { color: #0D47A1; border-left-color: #1565C0; }
+    .session-time { font-size: 10px; color: #888; display: block; }
+    .session-room { font-size: 10px; color: #aaa; }
+  </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+const PRETALX_BASE = "https://talks.caving.dev/nss-convention-2026/talk/";
+
+const sessions = {
+  "school": [
+    {
+      "title": "Opening Ceremony",
+      "code": "NHJQTT",
+      "start": "2026-07-06T08:30:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "TBA"
+    },
+    {
+      "title": "BOG Open Meeting",
+      "code": "DNHRPR",
+      "start": "2026-07-06T09:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "104"
+    },
+    {
+      "title": "Cave Exploration of the Ohio Valley Region: Indiana, Ohio, Kentucky",
+      "code": "SE9KLY",
+      "start": "2026-07-06T09:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Introduction to Sketching: Digital and Paper",
+      "code": "EH937D",
+      "start": "2026-07-06T09:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "205"
+    },
+    {
+      "title": "Speleology for Cavers",
+      "code": "GDKSUC",
+      "start": "2026-07-06T09:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "254"
+    },
+    {
+      "title": "Carlsbad Caverns Listening Session",
+      "code": "AKSVS9",
+      "start": "2026-07-06T09:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "154"
+    },
+    {
+      "title": "Explorers Club Session",
+      "code": "7FBFC3",
+      "start": "2026-07-06T09:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "102"
+    },
+    {
+      "title": "BOG Lunch (Closed)",
+      "code": "HPFWVA",
+      "start": "2026-07-06T12:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "104"
+    },
+    {
+      "title": "Speleology Class Lunch",
+      "code": "JCGVPA",
+      "start": "2026-07-06T12:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "254"
+    },
+    {
+      "title": "10 Years of The Caving Podcast (Indiana focus)",
+      "code": "ELXL7B",
+      "start": "2026-07-06T12:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Fine Arts Salon Opening",
+      "code": "TFQ87J",
+      "start": "2026-07-06T12:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "Library"
+    },
+    {
+      "title": "Communications & Electronics",
+      "code": "UDCKBY",
+      "start": "2026-07-06T12:30:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "154"
+    },
+    {
+      "title": "Cave Exploration of the Ohio Valley Region: Indiana, Ohio, Kentucky",
+      "code": "NRZ7JX",
+      "start": "2026-07-06T13:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Speleology for Cavers",
+      "code": "THHJWM",
+      "start": "2026-07-06T13:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "254"
+    },
+    {
+      "title": "Vertical Training Commission (VTC)  (30 seats, 1 table)",
+      "code": "YEBVNM",
+      "start": "2026-07-06T13:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "205"
+    },
+    {
+      "title": "Cave Conservancy Roundtable",
+      "code": "FMAPBM",
+      "start": "2026-07-06T13:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "102"
+    },
+    {
+      "title": "NCRC Annual Meeting",
+      "code": "MSRMKR",
+      "start": "2026-07-06T13:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "110"
+    },
+    {
+      "title": "BOG Meeting (Closed)",
+      "code": "CE3SHL",
+      "start": "2026-07-06T14:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "104"
+    },
+    {
+      "title": "Communications & Electronic Session",
+      "code": "WUZH7Z",
+      "start": "2026-07-06T14:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "112"
+    },
+    {
+      "title": "Yoga",
+      "code": "LVCXZU",
+      "start": "2026-07-07T08:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "TBA"
+    },
+    {
+      "title": "Coffee & Karst",
+      "code": "VNVQVK",
+      "start": "2026-07-07T08:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Registration Hallway"
+    },
+    {
+      "title": "Discover Vertical Caving",
+      "code": "AJZQGH",
+      "start": "2026-07-07T08:30:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "100"
+    },
+    {
+      "title": "US Exploration",
+      "code": "AWL3SR",
+      "start": "2026-07-07T09:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Cave Conservation & Science",
+      "code": "S8TWBM",
+      "start": "2026-07-07T09:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "205"
+    },
+    {
+      "title": "Speleothem Repair    Workshop",
+      "code": "KNX9RX",
+      "start": "2026-07-07T09:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "254"
+    },
+    {
+      "title": "Cavers Against Sexual Harassment",
+      "code": "GSVSRL",
+      "start": "2026-07-07T09:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "154"
+    },
+    {
+      "title": "Interagency Meeting",
+      "code": "AJA9KX",
+      "start": "2026-07-07T09:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "102"
+    },
+    {
+      "title": "Book signing: Gary Roberson",
+      "code": "AXKB3E",
+      "start": "2026-07-07T11:30:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Vendors Area"
+    },
+    {
+      "title": "Cave Conservation & Science",
+      "code": "KU9FTA",
+      "start": "2026-07-07T12:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "205"
+    },
+    {
+      "title": "Luminary Speaker:  Cat & Charlie Bishop",
+      "code": "PJXSNT",
+      "start": "2026-07-07T12:30:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Auditorium"
+    },
+    {
+      "title": "US Exploration",
+      "code": "UHLBCL",
+      "start": "2026-07-07T14:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Cave Conservation &  Science",
+      "code": "FPUNSU",
+      "start": "2026-07-07T14:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "205"
+    },
+    {
+      "title": "Convention Planning",
+      "code": "7GZLXY",
+      "start": "2026-07-07T14:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "110"
+    },
+    {
+      "title": "Featured Speaker: Genevieve von Petzinger",
+      "code": "TSHWNR",
+      "start": "2026-07-07T21:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Coffee & Karst",
+      "code": "G3NGFL",
+      "start": "2026-07-08T08:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "Registration Hallway"
+    },
+    {
+      "title": "International Exploration",
+      "code": "JSY9FZ",
+      "start": "2026-07-08T09:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Biospeleology Session",
+      "code": "FJHNRG",
+      "start": "2026-07-08T09:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "205"
+    },
+    {
+      "title": "Cave Digging Section",
+      "code": "FHBVVD",
+      "start": "2026-07-08T09:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "254"
+    },
+    {
+      "title": "Discover Vertical Caving",
+      "code": "AFUCUP",
+      "start": "2026-07-08T09:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "100"
+    },
+    {
+      "title": "Caving & Culture",
+      "code": "RRFQVH",
+      "start": "2026-07-08T09:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "102"
+    },
+    {
+      "title": "NPS Cave Managers Meeting",
+      "code": "MZNRN9",
+      "start": "2026-07-08T09:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "112"
+    },
+    {
+      "title": "Luminary Speaker: Jill Yager",
+      "code": "N9WFX3",
+      "start": "2026-07-08T12:30:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Biospeleology",
+      "code": "B7PBWD",
+      "start": "2026-07-08T13:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "205"
+    },
+    {
+      "title": "Speleophilatelic Section Meeting",
+      "code": "X9KHJY",
+      "start": "2026-07-08T13:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "110"
+    },
+    {
+      "title": "International Exploration",
+      "code": "SFWDJ3",
+      "start": "2026-07-08T14:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Congress of Grottos",
+      "code": "AQZRY8",
+      "start": "2026-07-08T14:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "102"
+    },
+    {
+      "title": "Biospeleology Session",
+      "code": "U7NAGK",
+      "start": "2026-07-08T14:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "205"
+    },
+    {
+      "title": "NSS Auction",
+      "code": "GD7PYQ",
+      "start": "2026-07-08T19:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "228"
+    },
+    {
+      "title": "Yoga",
+      "code": "YLK7CK",
+      "start": "2026-07-09T08:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "TBD"
+    },
+    {
+      "title": "Geology  and Geography",
+      "code": "WLDPWJ",
+      "start": "2026-07-09T09:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Spelean History",
+      "code": "USYEQG",
+      "start": "2026-07-09T09:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "205"
+    },
+    {
+      "title": "Planned Giving",
+      "code": "R7VBRW",
+      "start": "2026-07-09T09:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "112"
+    },
+    {
+      "title": "State Cave Surveys",
+      "code": "LHEHKN",
+      "start": "2026-07-09T09:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "102"
+    },
+    {
+      "title": "Vertical Section session",
+      "code": "D3H8E3",
+      "start": "2026-07-09T09:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "254"
+    },
+    {
+      "title": "Paleontology",
+      "code": "7NEREN",
+      "start": "2026-07-09T09:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "TBD"
+    },
+    {
+      "title": "Book signing: Gary Roberson",
+      "code": "MEBNTN",
+      "start": "2026-07-09T11:30:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Vendors Area"
+    },
+    {
+      "title": "Vertical Section Lunch/Business Meeting",
+      "code": "WKHLG9",
+      "start": "2026-07-09T12:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "254"
+    },
+    {
+      "title": "NCKMS Steering Committee",
+      "code": "3KXM3H",
+      "start": "2026-07-09T12:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "110"
+    },
+    {
+      "title": "Luminary Speaker: Gordon Smith",
+      "code": "E7QRY8",
+      "start": "2026-07-09T12:30:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Cave Diving Exploration",
+      "code": "FME3TP",
+      "start": "2026-07-09T13:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "205"
+    },
+    {
+      "title": "Vertical Section Annual meeting, Awards",
+      "code": "QPY7YP",
+      "start": "2026-07-09T13:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "254"
+    },
+    {
+      "title": "Archeology",
+      "code": "WPLXYV",
+      "start": "2026-07-09T13:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "TBD"
+    },
+    {
+      "title": "Geology and Geography meeting",
+      "code": "AGYPWH",
+      "start": "2026-07-09T13:30:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Geology and Geography",
+      "code": "QRXJFU",
+      "start": "2026-07-09T14:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Convention Debrief",
+      "code": "VZYBNB",
+      "start": "2026-07-09T14:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "112"
+    },
+    {
+      "title": "NSS Preserves & Acquisitions",
+      "code": "MCCUZB",
+      "start": "2026-07-09T14:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "110"
+    },
+    {
+      "title": "Cave Photography Session",
+      "code": "S7QJVC",
+      "start": "2026-07-09T14:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "154"
+    },
+    {
+      "title": "NSS Awards Committee",
+      "code": "MEYQAH",
+      "start": "2026-07-09T14:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "104"
+    },
+    {
+      "title": "Sketching Contest Results",
+      "code": "QTDQQL",
+      "start": "2026-07-09T15:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Vendors area catwalk"
+    },
+    {
+      "title": "Photo Salon Short Show/Salon Awards",
+      "code": "G3C7RY",
+      "start": "2026-07-09T17:30:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Full Photo Salon/Salon Awards",
+      "code": "WRWLER",
+      "start": "2026-07-09T19:30:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Yoga",
+      "code": "HPYKFB",
+      "start": "2026-07-10T08:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "TBD"
+    },
+    {
+      "title": "BOG Meeting",
+      "code": "ZAH38V",
+      "start": "2026-07-10T09:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "104"
+    },
+    {
+      "title": "Video Salon Viewing",
+      "code": "ARYHGU",
+      "start": "2026-07-10T09:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Fine Art Salon Critique",
+      "code": "LQYSHL",
+      "start": "2026-07-10T09:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "Library"
+    },
+    {
+      "title": "Cave Writers  Workshop",
+      "code": "878B9Y",
+      "start": "2026-07-10T09:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "154"
+    },
+    {
+      "title": "NSF Trustees Meeting (open)",
+      "code": "HZWS3Z",
+      "start": "2026-07-10T09:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "112"
+    },
+    {
+      "title": "Photo Salon Critique",
+      "code": "YJRYJC",
+      "start": "2026-07-10T10:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "Library"
+    },
+    {
+      "title": "Print Salon Critique",
+      "code": "UUKUHH",
+      "start": "2026-07-10T10:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "Library"
+    },
+    {
+      "title": "Cave Ballad Salon Critique",
+      "code": "UFDVYE",
+      "start": "2026-07-10T10:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "Library"
+    },
+    {
+      "title": "Survey & Cartography Session",
+      "code": "PUBPBV",
+      "start": "2026-07-10T12:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "205"
+    },
+    {
+      "title": "Arts and Letters Lunch",
+      "code": "JXFJKN",
+      "start": "2026-07-10T12:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "154"
+    },
+    {
+      "title": "The Caving Podcast Live: Jason Ballensky",
+      "code": "LCQDRW",
+      "start": "2026-07-10T12:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "Auditorium"
+    },
+    {
+      "title": "Survey & Cartography Session",
+      "code": "P7WMBS",
+      "start": "2026-07-10T13:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "205"
+    },
+    {
+      "title": "Cave Writers  Workshop",
+      "code": "KVSDHZ",
+      "start": "2026-07-10T13:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "154"
+    },
+    {
+      "title": "BOG Meeting",
+      "code": "TXDSSB",
+      "start": "2026-07-10T13:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "104"
+    },
+    {
+      "title": "NSF Trustees Meeting (closed)",
+      "code": "HGA7BK",
+      "start": "2026-07-10T13:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "112"
+    },
+    {
+      "title": "Collegiate Grotto Challenges and Solutions",
+      "code": "AVFTRP",
+      "start": "2026-07-10T13:30:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "110"
+    },
+    {
+      "title": "NSS Awards Banquet",
+      "code": "87VDD9",
+      "start": "2026-07-10T18:30:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "TBD"
+    }
+  ],
+  "gym": [
+    {
+      "title": "Vertical Climbing Contests",
+      "code": "8V39Z7",
+      "start": "2026-07-06T12:30:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "Junior High Gym"
+    },
+    {
+      "title": "Vertical Climbing Contests",
+      "code": "JNHRZS",
+      "start": "2026-07-06T13:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "Junior High Gym"
+    },
+    {
+      "title": "Vertical climbing contests",
+      "code": "GV8BKP",
+      "start": "2026-07-07T12:30:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Junior High Gym"
+    },
+    {
+      "title": "Climbing contests",
+      "code": "B7DEVN",
+      "start": "2026-07-07T13:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Junior High Gym"
+    },
+    {
+      "title": "Vertical  Climbing Contests",
+      "code": "A9C3HR",
+      "start": "2026-07-08T12:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "Junior High Gym"
+    },
+    {
+      "title": "derigging from Vertical contests (closed)",
+      "code": "X9DF77",
+      "start": "2026-07-08T13:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "Junior High Gym"
+    },
+    {
+      "title": "Contingency Vertical Workshop",
+      "code": "AFTFUD",
+      "start": "2026-07-09T08:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Junior High Gym"
+    }
+  ],
+  "fairgrounds": [
+    {
+      "title": "Howdy Party Dinner & Music",
+      "code": "83BW8C",
+      "start": "2026-07-06T18:30:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "Campground"
+    },
+    {
+      "title": "Fellows- New Members Reception",
+      "code": "HQ8LXW",
+      "start": "2026-07-07T18:30:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Discovery Center"
+    },
+    {
+      "title": "Open Mic",
+      "code": "PUPHUJ",
+      "start": "2026-07-07T20:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "Campground stage"
+    },
+    {
+      "title": "Campground Party",
+      "code": "MKY7Z8",
+      "start": "2026-07-08T21:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "Campground"
+    },
+    {
+      "title": "Caver Story Telling Contest",
+      "code": "L7SYVG",
+      "start": "2026-07-09T22:00:00-04:00",
+      "day": "Thu Jul 9",
+      "room": "Windell  Ag  Building"
+    },
+    {
+      "title": "Cartographic Salon Critique",
+      "code": "HRVF7P",
+      "start": "2026-07-10T10:00:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "Cart Salon site"
+    },
+    {
+      "title": "Campground Party",
+      "code": "SDUDXA",
+      "start": "2026-07-10T21:30:00-04:00",
+      "day": "Fri Jul 10",
+      "room": "Campground"
+    }
+  ],
+  "caverns": [
+    {
+      "title": "In-Cave Sketching - Paper & Digital",
+      "code": "CNBAVE",
+      "start": "2026-07-06T13:00:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "in-cave"
+    },
+    {
+      "title": "Cave Open House",
+      "code": "C7YJKS",
+      "start": "2026-07-06T18:30:00-04:00",
+      "day": "Mon Jul 6",
+      "room": "Indiana Caverns"
+    },
+    {
+      "title": "Photo Workshop",
+      "code": "V9LFWZ",
+      "start": "2026-07-07T09:00:00-04:00",
+      "day": "Tue Jul 7",
+      "room": "in-cave"
+    },
+    {
+      "title": "Speleothem Repair Workshop Part II",
+      "code": "KRFLTJ",
+      "start": "2026-07-08T09:00:00-04:00",
+      "day": "Wed Jul 8",
+      "room": "in-cave"
+    }
+  ]
+};
+
+function formatTime(iso) {
+  if (!iso) return "";
+  const d = new Date(iso);
+  return d.toLocaleTimeString("en-US", { hour: "numeric", minute: "2-digit", hour12: true });
+}
+
+function buildSessionList(venueKey) {
+  const list = sessions[venueKey] || [];
+  if (!list.length) return "<em style=\"font-size:12px;color:#999\">No sessions assigned</em>";
+
+  // Group by day
+  const byDay = {};
+  for (const s of list) {
+    if (!byDay[s.day]) byDay[s.day] = [];
+    byDay[s.day].push(s);
+  }
+
+  let html = "";
+  for (const [day, items] of Object.entries(byDay)) {
+    html += `<div class="day-group"><div class="day-label">${day}</div>`;
+    for (const s of items) {
+      const time = formatTime(s.start);
+      const room = s.room !== "?" ? ` · ${s.room}` : "";
+      html += `<a class="session-link" href="${PRETALX_BASE}${s.code}/" target="_blank">
+        ${s.title}
+        <span class="session-time">${time}<span class="session-room">${room}</span></span>
+      </a>`;
+    }
+    html += "</div>";
+  }
+  return html;
+}
+
+const venues = [
+  {
+    key: "school",
+    name: "Corydon Central School Campus",
+    address: "375 Country Club Rd SE, Corydon, IN",
+    note: "Daily sessions, salons, and committee meetings",
+    lat: 38.200696, lng: -86.119399,
+    color: "#1565C0",
+  },
+  {
+    key: "gym",
+    name: "Junior High Gym",
+    address: "Corydon Central Junior High, Corydon, IN",
+    note: "Vertical climbing contests & caving activities",
+    lat: 38.201400, lng: -86.120100,
+    color: "#1565C0",
+  },
+  {
+    key: "fairgrounds",
+    name: "Harrison County Fairgrounds",
+    address: "341 S Capitol Ave, Corydon, IN",
+    note: "Camping, evening events, Howdy Party, NSS Auction",
+    lat: 38.206780, lng: -86.128380,
+    color: "#2E7D32",
+  },
+  {
+    key: "caverns",
+    name: "Indiana Caverns",
+    address: "1267 Green Acres Dr SW, Corydon, IN",
+    note: "Cave Open House (Monday evening), in-cave activities",
+    lat: 38.182500, lng: -86.150172,
+    color: "#4E342E",
+  },
+];
+
+const map = L.map("map").setView([38.197, -86.128], 14);
+
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 19,
+}).addTo(map);
+
+venues.forEach(v => {
+  const popup = `
+    <div style="min-width:240px;max-width:300px">
+      <div class="popup-title">${v.name}</div>
+      <div class="popup-note">${v.note}</div>
+      ${buildSessionList(v.key)}
+    </div>`;
+
+  L.circleMarker([v.lat, v.lng], {
+    radius: 11,
+    fillColor: v.color,
+    color: "white",
+    weight: 2,
+    opacity: 1,
+    fillOpacity: 0.9,
+  })
+  .bindPopup(popup, { maxWidth: 320, maxHeight: 400 })
+  .addTo(map);
+});
+
+const legend = L.control({ position: "topright" });
+legend.onAdd = () => {
+  const div = L.DomUtil.create("div", "legend");
+  div.innerHTML = `
+    <h3>NSS Convention 2026</h3>
+    <div style="font-size:11px;color:#666;margin-bottom:6px">Corydon, IN &middot; July 6&ndash;10</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#1565C0"></div>School Campus / Gym</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#2E7D32"></div>Fairgrounds</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4E342E"></div>Indiana Caverns</div>`;
+  return div;
+};
+legend.addTo(map);
+</script>
+</body>
+</html>

@@ -113,9 +113,9 @@ Row 4 contains: _"Vendors Schedule: Monday 8-5; Tues-Wed-Thursday 8 to 8; Friday
 
 The spreadsheet has individual day tabs (Monday, Tuesday, Wednesday, Thursday, Thu+Fri) in addition to the main combined schedule tab that was imported. The following conflicts were found:
 
-All items below require organizer confirmation before updating Pretalx.
+The main tab (PRELIM SCHEDULE) is authoritative. Day tab differences are noted for reference only — no Pretalx updates needed.
 
-### Room conflicts
+### Room differences (main tab is correct)
 
 | Event | Day | Main tab | Day tab |
 |---|---|---|---|
@@ -126,23 +126,18 @@ All items below require organizer confirmation before updating Pretalx.
 | Discover Vertical Caving | Tue | Room 100 | "classroom close to gym" (Tuesday tab) |
 | Discover Vertical Caving | Wed | Room 100 | "classroom lecture & hands on in gym" (Wednesday tab) |
 
-### Time conflicts
+### Time differences (main tab is correct)
 
 | Event | Day | Main tab | Day tab |
 |---|---|---|---|
-| Archeology | Thu | 1:00–5:00pm, TBD (afternoon) | 9:00–Noon, Room 205 (both Thursday tabs) |
+| Archeology | Thu | 1:00–5:00pm, TBD | 9:00–Noon, Room 205 (both Thursday tabs) |
 | NSS Awards Banquet | Fri | 6:30–8:30 | 7:00–9:30 (Thu+Fri tab) |
 
-### Venue unresolved in day tabs
+### Other differences (main tab is correct)
 
 | Event | Day | Main tab | Day tab |
 |---|---|---|---|
 | Caver Story Telling Contest | Thu | Windell Ag Building | "Where in campground?" (both Thursday tabs) |
-| Paleontology | Thu | 9-Noon, TBD | No time or room listed (Thursday tab) — may be unconfirmed |
-
-### Name/title conflicts (typos in day tabs, main tab assumed correct)
-
-| Event | Day | Main tab | Day tab |
-|---|---|---|---|
-| The Caving Podcast Live | Fri | Jason Ball**en**sky | Jason Ball**e**sky — missing letter (Thu+Fri tab) |
+| Paleontology | Thu | 9-Noon, TBD | No time or room listed (Thursday tab) |
+| The Caving Podcast Live | Fri | Jason Ball**en**sky | Jason Ball**e**sky — typo in Thu+Fri tab |
 | Vertical Section Lunch/Business Meeting | Thu | Vertical | "**Vetical** Section..." — typo in both Thursday tabs |
