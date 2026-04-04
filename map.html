@@ -981,15 +981,19 @@ attractions.forEach(a => {
 });
 attractionLayer.addTo(map);
 
-const hillshadeLayer = L.esri.imageMapLayer({
+const hillshadeIN = L.esri.imageMapLayer({
   url: "https://di-ingov.img.arcgis.com/arcgis/rest/services/DynamicWebMercator/Indiana_2016_2020_DEM/ImageServer",
   renderingRule: { rasterFunction: "GrayscaleHillshade" },
+  opacity: 0.5,
+});
+const hillshadeKY = L.esri.imageMapLayer({
+  url: "https://kyraster.ky.gov/arcgis/rest/services/ElevationServices/Ky_DEM_KYAPED_2FT_Phase3_Hillshade_WGS84WM/ImageServer",
   opacity: 0.5,
 });
 
 L.control.layers(
   { "Street Map": osmLayer },
-  { "Hillshade (IN LiDAR)": hillshadeLayer, "Convention Venues": venueLayer, "Local Attractions": attractionLayer },
+  { "Hillshade IN (LiDAR)": hillshadeIN, "Hillshade KY (LiDAR)": hillshadeKY, "Convention Venues": venueLayer, "Local Attractions": attractionLayer },
   { position: "topleft", collapsed: false }
 ).addTo(map);
 
