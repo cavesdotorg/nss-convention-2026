@@ -1,143 +1,36 @@
 # NSS 2026 Schedule Discrepancies
-_Identified during import on 2026-03-14_
+_Identified June 2026 within `PrintCopy - 2026_NSSProgram_FINALv2.pdf`._
+
+The XLSX schedule grid is embedded in the PDF. All discrepancies below are internal to the PDF — conflicts between the schedule grid/table and the narrative body text. Items marked **[imported as X]** reflect what was written to Pretalx.
 
 ---
 
-## 1. Room Name Inconsistencies
+## 1. Room conflicts: schedule grid vs. body text
 
-| Sheet value | Canonical used | Rows |
+| Session | Day | Schedule grid | Body text | Resolution |
+|---|---|---|---|---|
+| NSS Auction | Wed 7pm | 223 | 233 (p. 51) | **Imported as 223** — verify with organizers |
+| Discover Vertical Caving | Tue 9:00–12:30 | 100 | 101 (p. 48) | **Imported as 100** |
+| State Cave Surveys | Thu 1:00–5:00 | 205 | 209 (p. 56) | **Imported as 205** |
+| NSS Preserves & Acquisitions | Thu 2:00–5:00 | 254 | 110 (p. 56) | **Imported as 110** |
+| NSS Awards Committee | Thu 2:00–5:00 | 154 | 104 (p. 56) | **Imported as 104** |
+| Cave Photography Session | Thu 2:00–5:00 | 112 | 154 (p. 56) | **Imported as 154** |
+
+---
+
+## 2. Time conflicts: schedule grid vs. body text
+
+| Session | Day | Schedule grid | Body text | Resolution |
+|---|---|---|---|---|
+| Biospeleology | Wed | 9:00–Noon | 8:00am–12:30pm (p. 51) | **Imported as 8:00–12:30** |
+| Convention Planning | Tue | 2:00–5:00 | 2:00–4:00 (p. 49) | **Imported as 2:00–5:00** |
+
+---
+
+## 3. Events with partial or ambiguous timing
+
+| Session | Day | Note |
 |---|---|---|
-| `Jr. High Gym` | `Junior High Gym` | Row 29 (Mon afternoon) |
-| `campground` (lowercase) | `Campground` | Row 39 (Fri evening) |
-| `Vendors area catwalk` | — | Row 35 — differs from `Vendors Area` in capitalization |
-| `Cave Conservation &  Science` | — | Row 28 — double space vs `Cave Conservation & Science` |
-
----
-
-## 2. Numbered Rooms Have No Building Name
-
-Rooms 100, 102, 104, 110, 112, 154, 205, 228, 254 have no building prefix.
-Building name unknown — needs to be confirmed with organizers and added to the sheet.
-
----
-
-## 3. Time Format Inconsistencies
-
-| Event | Time as written | Issue |
-|---|---|---|
-| Opening Ceremony (Mon) | `8:30 -9:00` | Space before dash |
-| BOG Meeting (Closed) (Mon) | `2:00 - 5:00` | Spaces around dash |
-| Howdy Party (Mon) | `6:30 - Midnight` | Spaces around dash |
-| Video Salon Viewing (Fri) | `9:00 - Noon` | Spaces around dash |
-| NSS Awards Banquet (Fri) | `6:30 - 8:30` | Spaces around dash |
-| Climbing contests (Tue) | `1:00-5::00` | Double colon — typo, likely `1:00-5:00` |
-| Cave Conservation & Science (Tue) | `2:00-5:01` | Likely typo, should be `5:00` |
-| Planned Giving (Thu) | `9-Noon` | Missing `:00` on start |
-| State Cave Surveys (Thu) | `9-Noon` | Missing `:00` on start |
-| Vertical Section session (Thu) | `9-Noon` | Missing `:00` on start |
-| Paleontology (Thu) | `9-Noon` | Missing `:00` on start |
-| Carlsbad Caverns Listening Session (Mon) | `9:00-noon` | Lowercase `noon` |
-| The Caving Podcast Live (Fri) | `noon-1:00` | Lowercase `noon` |
-
----
-
-## 4. Missing End Times (defaulted to 60 min)
-
-| Event | Day | Time as written |
-|---|---|---|
-| Vertical Climbing Contests | Mon | `12:30 start` |
-| Vertical climbing contests | Tue | `12:30 start` |
-| NSS Auction | Wed | `7:00 start` |
-| Open Mic | Tue | `8:00 start` |
-| Campground Party | Wed | `9:00 start` |
-| NSS Awards Committee | Thu | `2:00-3:00 open  4:00-5:00 closed` (split session — only first half imported) |
-
----
-
-## 5. Missing Location
-
-| Event | Day | Issue |
-|---|---|---|
-| NSS Awards Banquet | Fri | No room/location listed in sheet |
-
----
-
-## 6. Title Inconsistencies / Extra Whitespace
-
-| Sheet value | Issue |
-|---|---|
-| `Cave Conservation &  Science` | Double space around `&` (appears on Tue afternoon) |
-| `Cave Writers  Workshop` | Double space (appears Mon and Fri) |
-| `Speleothem Repair    Workshop` | Four spaces (Tue morning) vs `Speleothem Repair Workshop Part II` (Wed) |
-| `Vertical Training Commission (VTC)  (30 seats, 1 table)` | Room capacity note embedded in event title |
-| `Geology  and Geography` | Double space (Thu morning) vs `Geology and Geography` (Thu afternoon/Fri) |
-
----
-
-## 7. Duplicate Event Entries
-
-| Event | Issue |
-|---|---|
-| `Photo Workshop` (Tue) | Appears 3 times in the Tuesday column (rows 15, 21, 30) — only imported once |
-| `Cave Conservation & Science` (Tue) | Appears in both morning (9:00-Noon) and lunch (Noon-1:00) blocks |
-
----
-
-## 8. Multi-Day / Week-Long Events Not Imported
-
-These appear in the header rows (rows 1–4) and were skipped:
-
-| Event | Duration | Location |
-|---|---|---|
-| Fine Arts Salon | All week | Library |
-| Junior Speleological Society | All week | Band Room |
-| Caver Co-Op | All week | TBD |
-| Ballad Listening Kiosk | All week | LOC |
-| Video Kiosk | All week | LOC |
-| Vendors | All week | Auxiliary Gym |
-| Quiet Room | All week | 228 |
-| NSS Bookstore | All week | TBD |
-| Cartography Salon | All week | Aux. Gym Catwalk |
-| Sketching Contest | Mon & Tue | in-cave |
-| CaveSim | Mon & Tue | Next to registration |
-
----
-
-## 9. Vendor Hours Note (not an event)
-
-Row 4 contains: _"Vendors Schedule: Monday 8-5; Tues-Wed-Thursday 8 to 8; Friday 8-12"_ — this is a note in the schedule grid, not an event, and was not imported.
-
----
-
-## 10. Conflicts Between Main Tab and Individual Day Tabs
-
-The spreadsheet has individual day tabs (Monday, Tuesday, Wednesday, Thursday, Thu+Fri) in addition to the main combined schedule tab that was imported. The following conflicts were found:
-
-The main tab (PRELIM SCHEDULE) is authoritative. Day tab differences are noted for reference only — no Pretalx updates needed.
-
-### Room differences (main tab is correct)
-
-| Event | Day | Main tab | Day tab |
-|---|---|---|---|
-| BOG Open Meeting | Mon | Room 104 | Room 114 (Monday tab) |
-| BOG Lunch (Closed) | Mon | Room 104 | Room 114 (Monday tab) |
-| BOG Meeting (Closed) | Mon | Room 104 | Room 114 (Monday tab) |
-| BOG Meeting | Fri | Room 104 | _(no room listed)_ |
-| Discover Vertical Caving | Tue | Room 100 | "classroom close to gym" (Tuesday tab) |
-| Discover Vertical Caving | Wed | Room 100 | "classroom lecture & hands on in gym" (Wednesday tab) |
-
-### Time differences (main tab is correct)
-
-| Event | Day | Main tab | Day tab |
-|---|---|---|---|
-| Archeology | Thu | 1:00–5:00pm, TBD | 9:00–Noon, Room 205 (both Thursday tabs) |
-| NSS Awards Banquet | Fri | 6:30–8:30 | 7:00–9:30 (Thu+Fri tab) |
-
-### Other differences (main tab is correct)
-
-| Event | Day | Main tab | Day tab |
-|---|---|---|---|
-| Caver Story Telling Contest | Thu | Windell Ag Building | "Where in campground?" (both Thursday tabs) |
-| Paleontology | Thu | 9-Noon, TBD | No time or room listed (Thursday tab) |
-| The Caving Podcast Live | Fri | Jason Ball**en**sky | Jason Ball**e**sky — typo in Thu+Fri tab |
-| Vertical Section Lunch/Business Meeting | Thu | Vertical | "**Vetical** Section..." — typo in both Thursday tabs |
+| Howdy Party | Mon 5:30pm | Dinner 5:30–7:30; music (The Creekers) starts at 9:00pm. Only dinner window imported. |
+| Farewell Party | Fri 9pm | Room embedded in time string ("9:00-Midnight at Fairgrounds"); extracted automatically. |
+| NSS Awards Committee | Thu | Split session: open 2:00–3:00, closed 4:00–5:00. Only the first range is imported. |
