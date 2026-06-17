@@ -73,12 +73,6 @@
       "scheduled": true,
       "title": "Coffee & Karst"
     },
-    "2026-07-08|International Exploration|9:00-Noon": {
-      "code": "EJ99SG",
-      "slot": 543,
-      "scheduled": true,
-      "title": "International Exploration"
-    },
     "2026-07-09|Contingency Considerations in Caving|8:00-Noon": {
       "code": "ELPGZV",
       "slot": 544,
@@ -90,36 +84,6 @@
       "slot": 545,
       "scheduled": true,
       "title": "NSF Trustees Meeting (open)"
-    },
-    "2026-07-06|Cave Exploration of the Ohio Valley Region: Indiana, Ohio, Kentucky|9:00-Noon": {
-      "code": "WGFP7W",
-      "slot": 546,
-      "scheduled": true,
-      "title": "Cave Exploration of the Ohio Valley Region: Indiana, Ohio, Kentucky"
-    },
-    "2026-07-07|US Exploration|9:00-Noon": {
-      "code": "KUMB3Q",
-      "slot": 547,
-      "scheduled": true,
-      "title": "US Exploration"
-    },
-    "2026-07-08|Biospeleology|8:00-12:30": {
-      "code": "HM8TMZ",
-      "slot": 548,
-      "scheduled": true,
-      "title": "Biospeleology"
-    },
-    "2026-07-09|Spelean History|9:00-Noon": {
-      "code": "8U7HYJ",
-      "slot": 549,
-      "scheduled": true,
-      "title": "Spelean History"
-    },
-    "2026-07-10|Geology and Geography|9:00 - Noon": {
-      "code": "VJZREL",
-      "slot": 550,
-      "scheduled": true,
-      "title": "Geology and Geography"
     },
     "2026-07-06|Introduction to Sketching: Digital and Paper|9:00-Noon": {
       "code": "XHESSX",
@@ -157,23 +121,11 @@
       "scheduled": true,
       "title": "Speleology for Cavers"
     },
-    "2026-07-07|Cave Conservation & Management|9:00-Noon": {
-      "code": "JGQKLM",
-      "slot": 557,
-      "scheduled": true,
-      "title": "Cave Conservation & Management"
-    },
     "2026-07-08|Cave Digging Section|9:00-Noon": {
       "code": "FSJ8DP",
       "slot": 558,
       "scheduled": true,
       "title": "Cave Digging Section"
-    },
-    "2026-07-09|Vertical Section session|9:00-2:00": {
-      "code": "HRLPNN",
-      "slot": 559,
-      "scheduled": true,
-      "title": "Vertical Section session"
     },
     "2026-07-10|Fine Art Salon Critique|9:00-10:00": {
       "code": "9LGTAD",
@@ -199,12 +151,6 @@
       "scheduled": true,
       "title": "Discover Vertical Caving"
     },
-    "2026-07-09|Paleontology|9:00-Noon": {
-      "code": "GKUEGL",
-      "slot": 564,
-      "scheduled": true,
-      "title": "Paleontology"
-    },
     "2026-07-10|Cartographic Salon Critique|10:00-Noon": {
       "code": "SPDXBA",
       "slot": 565,
@@ -222,12 +168,6 @@
       "slot": 567,
       "scheduled": true,
       "title": "Discover Vertical Caving"
-    },
-    "2026-07-08|Caving & Culture|9:00-Noon": {
-      "code": "FHN7WU",
-      "slot": 568,
-      "scheduled": true,
-      "title": "Caving & Culture"
     },
     "2026-07-09|Cave Photography Workshop|9:00-1:00": {
       "code": "87KG9X",
@@ -391,47 +331,17 @@
       "scheduled": true,
       "title": "Fine Arts Salon Opening"
     },
-    "2026-07-06|Cave Exploration of the Ohio Valley Region: Indiana, Ohio, Kentucky|1:00-5:00": {
-      "code": "7UNHEW",
-      "slot": 596,
-      "scheduled": true,
-      "title": "Cave Exploration of the Ohio Valley Region: Indiana, Ohio, Kentucky"
-    },
-    "2026-07-07|US Exploration|2:00-5:00": {
-      "code": "MQQHFZ",
-      "slot": 597,
-      "scheduled": true,
-      "title": "US Exploration"
-    },
-    "2026-07-08|International Exploration|2:00-5:00": {
-      "code": "BGA8N9",
-      "slot": 598,
-      "scheduled": true,
-      "title": "International Exploration"
-    },
     "2026-07-09|Cave Diving Exploration|1:00-5:00": {
       "code": "JTEUJ9",
       "slot": 599,
       "scheduled": true,
       "title": "Cave Diving Exploration"
     },
-    "2026-07-10|Geology and Geography|1:00-5:00": {
-      "code": "8QPY7K",
-      "slot": 600,
-      "scheduled": true,
-      "title": "Geology and Geography"
-    },
     "2026-07-06|BOG Meeting (Closed)|2:00 - 5:00": {
       "code": "LLGE7W",
       "slot": 601,
       "scheduled": true,
       "title": "BOG Meeting (Closed)"
-    },
-    "2026-07-07|Cave Conservation & Management, Celebrating Robb Stitt|2:00-4:00             4:00-5:00": {
-      "code": "F7NZJR",
-      "slot": 602,
-      "scheduled": true,
-      "title": "Cave Conservation & Management, Celebrating Robb Stitt"
     },
     "2026-07-08|Congress of Grottos|2:00-5:00": {
       "code": "DRYMLR",
@@ -444,12 +354,6 @@
       "slot": 604,
       "scheduled": true,
       "title": "State Cave Surveys"
-    },
-    "2026-07-10|Survey & Cartography Session|1:00-5:00": {
-      "code": "SLBCTD",
-      "slot": 605,
-      "scheduled": true,
-      "title": "Survey & Cartography Session"
     },
     "2026-07-06|Vertical Climbing Contests|1:00-5:00": {
       "code": "CLHURN",
@@ -529,18 +433,6 @@
       "scheduled": true,
       "title": "Collegiate Grotto Challenges and Solutions"
     },
-    "2026-07-06|Communications & Electronics|2:00-5:00": {
-      "code": "8DSYQP",
-      "slot": 619,
-      "scheduled": true,
-      "title": "Communications & Electronics"
-    },
-    "2026-07-09|Cave Photography Session|2:00-5:00": {
-      "code": "HMV7WM",
-      "slot": 620,
-      "scheduled": true,
-      "title": "Cave Photography Session"
-    },
     "2026-07-10|NSF Trustees Meeting (closed)|1:00-5:00": {
       "code": "E9LTYQ",
       "slot": 621,
@@ -564,12 +456,6 @@
       "slot": 624,
       "scheduled": true,
       "title": "Cave Conservancy Roundtable"
-    },
-    "2026-07-09|Archaeology|2:00-5:00": {
-      "code": "CHSX8L",
-      "slot": 625,
-      "scheduled": true,
-      "title": "Archaeology"
     },
     "2026-07-06|Howdy Party Dinner/Music : The Creekers|5:30-7:30": {
       "code": "AAPNEN",
@@ -648,6 +534,792 @@
       "slot": 638,
       "scheduled": true,
       "title": "Karaoke"
+    },
+    "talk|2026-07-06|09:05|Auditorium|Regional Geology and GIS Overview": {
+      "code": "S8VQLB",
+      "slot": 742,
+      "scheduled": true,
+      "title": "Regional Geology and GIS Overview"
+    },
+    "talk|2026-07-06|09:15|Auditorium|Ohio Cave Survey\u2014State Overview": {
+      "code": "UWHKW8",
+      "slot": 743,
+      "scheduled": true,
+      "title": "Ohio Cave Survey\u2014State Overview"
+    },
+    "talk|2026-07-06|09:25|Auditorium|Indiana Cave Survey\u2014State Overview": {
+      "code": "MVAM9W",
+      "slot": 744,
+      "scheduled": true,
+      "title": "Indiana Cave Survey\u2014State Overview"
+    },
+    "talk|2026-07-06|09:35|Auditorium|Kentucky Speleological Survey": {
+      "code": "HPPEUS",
+      "slot": 745,
+      "scheduled": true,
+      "title": "Kentucky Speleological Survey"
+    },
+    "talk|2026-07-06|09:45|Auditorium|Exploring Courtey Cave and the Cave Syst": {
+      "code": "E7AHHH",
+      "slot": 746,
+      "scheduled": true,
+      "title": "Exploring Courtey Cave and the Cave Systems of Central Ohio's Scioto River Corridor"
+    },
+    "talk|2026-07-06|10:05|Auditorium|Caves of Edwards Mountain & Wayne County": {
+      "code": "ZLZTJS",
+      "slot": 747,
+      "scheduled": true,
+      "title": "Caves of Edwards Mountain & Wayne County (incl Spelunger Cave)"
+    },
+    "talk|2026-07-06|10:55|Auditorium|Modern Exploration in Big Bat Cave": {
+      "code": "7DVFJK",
+      "slot": 748,
+      "scheduled": true,
+      "title": "Modern Exploration in Big Bat Cave"
+    },
+    "talk|2026-07-06|11:15|Auditorium|Pless Cave\u2014Exploration & Mapping": {
+      "code": "NPRGFL",
+      "slot": 749,
+      "scheduled": true,
+      "title": "Pless Cave\u2014Exploration & Mapping"
+    },
+    "talk|2026-07-06|11:35|Auditorium|James Cave, The Cave, The Exploration": {
+      "code": "8SXEKY",
+      "slot": 750,
+      "scheduled": true,
+      "title": "James Cave, The Cave, The Exploration"
+    },
+    "talk|2026-07-06|13:00|Auditorium|Big Bat Cave\u2014A Brief History of Explorat": {
+      "code": "STAHRX",
+      "slot": 751,
+      "scheduled": true,
+      "title": "Big Bat Cave\u2014A Brief History of Exploration"
+    },
+    "talk|2026-07-06|13:20|Auditorium|Sandstone Caves in Northeast Ohio": {
+      "code": "LH7RXZ",
+      "slot": 752,
+      "scheduled": true,
+      "title": "Sandstone Caves in Northeast Ohio"
+    },
+    "talk|2026-07-06|13:40|Auditorium|Great Caves, Great Survey Projects in Ro": {
+      "code": "9REYKC",
+      "slot": 753,
+      "scheduled": true,
+      "title": "Great Caves, Great Survey Projects in Rockcastle County, Kentucky"
+    },
+    "talk|2026-07-06|14:10|Auditorium|Twenty Kentucky Caves that Might be Bigg": {
+      "code": "YAP99E",
+      "slot": 754,
+      "scheduled": true,
+      "title": "Twenty Kentucky Caves that Might be Bigger than Mammoth"
+    },
+    "talk|2026-07-06|14:50|Auditorium|Fisher Ridge Cave System Project 2023-20": {
+      "code": "7EA3SN",
+      "slot": 755,
+      "scheduled": true,
+      "title": "Fisher Ridge Cave System Project 2023-2026 Update"
+    },
+    "talk|2026-07-06|15:10|Auditorium|Roppel Cave": {
+      "code": "78LCBL",
+      "slot": 756,
+      "scheduled": true,
+      "title": "Roppel Cave"
+    },
+    "talk|2026-07-06|15:30|Auditorium|History of Cave Exploration in Wayne Cou": {
+      "code": "JQ9DKG",
+      "slot": 757,
+      "scheduled": true,
+      "title": "History of Cave Exploration in Wayne County, Kentucky"
+    },
+    "talk|2026-07-06|15:50|Auditorium|Cedar Grove Cave\u2014Discovery of a Virgin C": {
+      "code": "TBFA9W",
+      "slot": 758,
+      "scheduled": true,
+      "title": "Cedar Grove Cave\u2014Discovery of a Virgin Cave"
+    },
+    "talk|2026-07-06|16:10|Auditorium|Whigpistle Cave Project Update": {
+      "code": "WGEKJH",
+      "slot": 759,
+      "scheduled": true,
+      "title": "Whigpistle Cave Project Update"
+    },
+    "talk|2026-07-06|16:30|Auditorium|Cave Mapping and Inventory of a Signific": {
+      "code": "HHTDZE",
+      "slot": 760,
+      "scheduled": true,
+      "title": "Cave Mapping and Inventory of a Significant Kentucky National Forest"
+    },
+    "talk|2026-07-06|14:15|112|UC Bat Edition for Bioacoustic Monitorin": {
+      "code": "EA99T7",
+      "slot": 761,
+      "scheduled": true,
+      "title": "UC Bat Edition for Bioacoustic Monitoring (virtual)"
+    },
+    "talk|2026-07-06|14:45|112|Flamingo Cave Radios": {
+      "code": "HTY39Z",
+      "slot": 762,
+      "scheduled": true,
+      "title": "Flamingo Cave Radios"
+    },
+    "talk|2026-07-06|15:15|112|Tuned Loop Antenna Matching Made Easy": {
+      "code": "X3SDLZ",
+      "slot": 763,
+      "scheduled": true,
+      "title": "Tuned Loop Antenna Matching Made Easy"
+    },
+    "talk|2026-07-06|15:45|112|Analysis of a Network Outage in BuecherN": {
+      "code": "BQTNKH",
+      "slot": 764,
+      "scheduled": true,
+      "title": "Analysis of a Network Outage in BuecherNet in Fort Stanton Cave, NM"
+    },
+    "talk|2026-07-06|16:15|112|Audio in Cave Projects": {
+      "code": "VRHJN8",
+      "slot": 765,
+      "scheduled": true,
+      "title": "Audio in Cave Projects"
+    },
+    "talk|2026-07-07|09:00|Auditorium|Modern Exploration of Warren Cave in Flo": {
+      "code": "JVQKJK",
+      "slot": 766,
+      "scheduled": true,
+      "title": "Modern Exploration of Warren Cave in Florida"
+    },
+    "talk|2026-07-07|09:20|Auditorium|Lee County Blowing \u2013 A Speleo Who Dun It": {
+      "code": "LTXCKF",
+      "slot": 767,
+      "scheduled": true,
+      "title": "Lee County Blowing \u2013 A Speleo Who Dun It"
+    },
+    "talk|2026-07-07|09:40|Auditorium|Binkley Cave Project": {
+      "code": "RF77U7",
+      "slot": 768,
+      "scheduled": true,
+      "title": "Binkley Cave Project"
+    },
+    "talk|2026-07-07|10:00|Auditorium|Recent Discoveries in Shoveleater Cave": {
+      "code": "LLGEBQ",
+      "slot": 769,
+      "scheduled": true,
+      "title": "Recent Discoveries in Shoveleater Cave"
+    },
+    "talk|2026-07-07|10:20|Auditorium|Fern Cave Project": {
+      "code": "9MC7D9",
+      "slot": 770,
+      "scheduled": true,
+      "title": "Fern Cave Project"
+    },
+    "talk|2026-07-07|10:45|Auditorium|Warm River Cave Update": {
+      "code": "3RJDA8",
+      "slot": 771,
+      "scheduled": true,
+      "title": "Warm River Cave Update"
+    },
+    "talk|2026-07-07|11:05|Auditorium|Cave Mapping and Inventory of a Signific": {
+      "code": "AQH39E",
+      "slot": 772,
+      "scheduled": true,
+      "title": "Cave Mapping and Inventory of a Significant KY National Forest"
+    },
+    "talk|2026-07-07|11:25|Auditorium|Recent Discoveries in Hidden River Cave,": {
+      "code": "8GA77P",
+      "slot": 773,
+      "scheduled": true,
+      "title": "Recent Discoveries in Hidden River Cave, Kentucky"
+    },
+    "talk|2026-07-07|11:45|Auditorium|Whigpistle Cave Project Update: 2026": {
+      "code": "MWHWTR",
+      "slot": 774,
+      "scheduled": true,
+      "title": "Whigpistle Cave Project Update: 2026"
+    },
+    "talk|2026-07-07|09:00|205|The Powell Mountain Karst Preserve: A Ma": {
+      "code": "KRBSFE",
+      "slot": 775,
+      "scheduled": true,
+      "title": "The Powell Mountain Karst Preserve: A Management Plan Analysis"
+    },
+    "talk|2026-07-07|09:20|205|Conservation and Management of the Paul ": {
+      "code": "DTEUHC",
+      "slot": 776,
+      "scheduled": true,
+      "title": "Conservation and Management of the Paul Wightman Subterranean Nature Preserve"
+    },
+    "talk|2026-07-07|09:40|205|The Effects of Excavation on Cave Ecosys": {
+      "code": "CJS8EE",
+      "slot": 777,
+      "scheduled": true,
+      "title": "The Effects of Excavation on Cave Ecosystems (Two Years Later)"
+    },
+    "talk|2026-07-07|10:00|205|Are There Renewable Resources in Caves? ": {
+      "code": "HPN9BW",
+      "slot": 778,
+      "scheduled": true,
+      "title": "Are There Renewable Resources in Caves? Do Drip Hole Rings Count? And What Can Cavers Ethically Do in Exploring and Studying Caves?"
+    },
+    "talk|2026-07-07|10:30|205|Protecting Caves and Karst \u2013 A Holistic ": {
+      "code": "XS9R3V",
+      "slot": 779,
+      "scheduled": true,
+      "title": "Protecting Caves and Karst \u2013 A Holistic Approach"
+    },
+    "talk|2026-07-07|11:00|205|Cavers, State Agencies, and the United S": {
+      "code": "LCHTEY",
+      "slot": 780,
+      "scheduled": true,
+      "title": "Cavers, State Agencies, and the United States Forest Service Working Together to Protect Caves and Karst in Virginia"
+    },
+    "talk|2026-07-07|11:20|205|Celebrate the UNESCO International Day o": {
+      "code": "CHXURT",
+      "slot": 781,
+      "scheduled": true,
+      "title": "Celebrate the UNESCO International Day of Caves and Karst, September 13th"
+    },
+    "talk|2026-07-07|14:00|Auditorium|Progress in Fort Stanton Cave, New Mexic": {
+      "code": "YUHZA9",
+      "slot": 782,
+      "scheduled": true,
+      "title": "Progress in Fort Stanton Cave, New Mexico"
+    },
+    "talk|2026-07-07|14:30|Auditorium|Gem Cave: A New Discovery Under South Da": {
+      "code": "ET93ES",
+      "slot": 783,
+      "scheduled": true,
+      "title": "Gem Cave: A New Discovery Under South Dakota's Black Hills"
+    },
+    "talk|2026-07-07|14:50|Auditorium|Walking into Mordor: The Mount Baker Gla": {
+      "code": "N8A8TW",
+      "slot": 784,
+      "scheduled": true,
+      "title": "Walking into Mordor: The Mount Baker Glaciovolcanic Cave Expedition"
+    },
+    "talk|2026-07-07|15:20|Auditorium|2025 Silvertip Expedition: Bobsled Cave ": {
+      "code": "QDS9QS",
+      "slot": 785,
+      "scheduled": true,
+      "title": "2025 Silvertip Expedition: Bobsled Cave Exploration"
+    },
+    "talk|2026-07-07|15:40|Auditorium|Klamath Mountains Project, Cave Research": {
+      "code": "FGPGAK",
+      "slot": 786,
+      "scheduled": true,
+      "title": "Klamath Mountains Project, Cave Research Foundation"
+    },
+    "talk|2026-07-07|16:10|Auditorium|Report-Walking: Using Search and Rescue ": {
+      "code": "YXRNYS",
+      "slot": 787,
+      "scheduled": true,
+      "title": "Report-Walking: Using Search and Rescue Reports to Find Unmapped Caves"
+    },
+    "talk|2026-07-07|16:30|Auditorium|Geology, Mineralogy, Archeology and Expl": {
+      "code": "X7VKPR",
+      "slot": 788,
+      "scheduled": true,
+      "title": "Geology, Mineralogy, Archeology and Exploration History of Hualalai Ranch Cave, Hawaii"
+    },
+    "talk|2026-07-07|14:00|205|The Restoration of Pleasant Valley Cave": {
+      "code": "TTEVRG",
+      "slot": 789,
+      "scheduled": true,
+      "title": "The Restoration of Pleasant Valley Cave"
+    },
+    "talk|2026-07-07|14:20|205|Bigger, Better Mobile Caves for STEM Edu": {
+      "code": "TQRT7A",
+      "slot": 790,
+      "scheduled": true,
+      "title": "Bigger, Better Mobile Caves for STEM Education Outreach"
+    },
+    "talk|2026-07-07|14:40|205|2026 U.S. Cave Animal of the Year \u2013 The ": {
+      "code": "WDCKVJ",
+      "slot": 791,
+      "scheduled": true,
+      "title": "2026 U.S. Cave Animal of the Year \u2013 The Slimy Salamander"
+    },
+    "talk|2026-07-07|15:00|205|Documenting and Describing Two Species o": {
+      "code": "YLPEW8",
+      "slot": 792,
+      "scheduled": true,
+      "title": "Documenting and Describing Two Species of Cave-Adapted Blind Fish in the Tiger Cave System, Phong Nha-K\u1ebb B\u00e0ng National Park, Vi\u1ec7t Nam"
+    },
+    "talk|2026-07-07|15:30|205|Phong Nha-K\u1ebb B\u00e0ng: Cave Ecotourism for S": {
+      "code": "LC7R8Z",
+      "slot": 793,
+      "scheduled": true,
+      "title": "Phong Nha-K\u1ebb B\u00e0ng: Cave Ecotourism for Sustainable Development in Vi\u1ec7t Nam"
+    },
+    "talk|2026-07-07|16:00|205|Celebrate the Conservation Legacy of Rob": {
+      "code": "FKNAWX",
+      "slot": 794,
+      "scheduled": true,
+      "title": "Celebrate the Conservation Legacy of Rob Stitt \u2014 Stories, Song, Snacks"
+    },
+    "talk|2026-07-08|09:00|Auditorium|PESH 2026": {
+      "code": "QTQHNT",
+      "slot": 795,
+      "scheduled": true,
+      "title": "PESH 2026"
+    },
+    "talk|2026-07-08|09:30|Auditorium|Cueva Sin Fin": {
+      "code": "9JABTJ",
+      "slot": 796,
+      "scheduled": true,
+      "title": "Cueva Sin Fin"
+    },
+    "talk|2026-07-08|10:00|Auditorium|40 Years of Exploration at Cueva Cheve, ": {
+      "code": "WCXAVH",
+      "slot": 797,
+      "scheduled": true,
+      "title": "40 Years of Exploration at Cueva Cheve, Oaxaca, Mexico"
+    },
+    "talk|2026-07-08|10:30|Auditorium|Roaming North-Eastern Mexico Surveying U": {
+      "code": "KGNWYT",
+      "slot": 798,
+      "scheduled": true,
+      "title": "Roaming North-Eastern Mexico Surveying Unexplored Caves"
+    },
+    "talk|2026-07-08|11:00|Auditorium|New Zealand Expedition, 2026": {
+      "code": "7H3SUP",
+      "slot": 799,
+      "scheduled": true,
+      "title": "New Zealand Expedition, 2026"
+    },
+    "talk|2026-07-08|11:30|Auditorium|Exploration in Montenegro": {
+      "code": "3NHQHK",
+      "slot": 800,
+      "scheduled": true,
+      "title": "Exploration in Montenegro"
+    },
+    "talk|2026-07-08|08:30|205|New Surveys of Cave and Groundwater Faun": {
+      "code": "JZHX3X",
+      "slot": 801,
+      "scheduled": true,
+      "title": "New Surveys of Cave and Groundwater Fauna in the Upper Floridan Aquifer"
+    },
+    "talk|2026-07-08|08:50|205|Mapping Cave Vulnerability and Priority ": {
+      "code": "XYX9JM",
+      "slot": 802,
+      "scheduled": true,
+      "title": "Mapping Cave Vulnerability and Priority Areas for Biospeleological Conservation"
+    },
+    "talk|2026-07-08|09:10|205|Directed Phytokarst: Red-Shifted Phototr": {
+      "code": "CEKDDL",
+      "slot": 803,
+      "scheduled": true,
+      "title": "Directed Phytokarst: Red-Shifted Phototrophy and Limestone Dissolution in Cave Twilight Zones"
+    },
+    "talk|2026-07-08|09:30|205|Examining Phylogenetic Relationships and": {
+      "code": "T3ZU8C",
+      "slot": 804,
+      "scheduled": true,
+      "title": "Examining Phylogenetic Relationships and Cryptic Diversity in the Genus Scoterpes (Chordeumatida: Trichopetalidae), a Wide-Ranging Genus of North American Cave-Obligate Millipedes"
+    },
+    "talk|2026-07-08|09:50|205|Evaluating the Biogenicity of Biovermicu": {
+      "code": "TSHFEJ",
+      "slot": 805,
+      "scheduled": true,
+      "title": "Evaluating the Biogenicity of Biovermiculations in Mammoth Cave, KY, USA"
+    },
+    "talk|2026-07-08|10:30|205|Population Monitoring of the Enigmatic C": {
+      "code": "ADNRVN",
+      "slot": 806,
+      "scheduled": true,
+      "title": "Population Monitoring of the Enigmatic Cave Snail, Fontigens antroecetes, in Stemler Cave"
+    },
+    "talk|2026-07-08|10:50|205|A Creature from the 'Upside Down': Crypt": {
+      "code": "JGHNBQ",
+      "slot": 807,
+      "scheduled": true,
+      "title": "A Creature from the 'Upside Down': Cryptic Cavefish Diversity in a Long-Studied Karst Cave Ecosystem"
+    },
+    "talk|2026-07-08|11:10|205|Sediment Geochemistry, Manganese Oxidati": {
+      "code": "3PLDSS",
+      "slot": 808,
+      "scheduled": true,
+      "title": "Sediment Geochemistry, Manganese Oxidation, Human Traffic, and Microbial Community Structure across Three Southern Appalachian Caves"
+    },
+    "talk|2026-07-08|11:30|205|Subterranean Isopod Diversity in Caves o": {
+      "code": "Z77NGM",
+      "slot": 809,
+      "scheduled": true,
+      "title": "Subterranean Isopod Diversity in Caves of the Northern Interior Low Plateaus"
+    },
+    "talk|2026-07-08|09:00|102|Cavers: Who, Why, So What?": {
+      "code": "FLEJH8",
+      "slot": 810,
+      "scheduled": true,
+      "title": "Cavers: Who, Why, So What?"
+    },
+    "talk|2026-07-08|09:30|102|Creating a Legacy at UA": {
+      "code": "JGGNBG",
+      "slot": 811,
+      "scheduled": true,
+      "title": "Creating a Legacy at UA"
+    },
+    "talk|2026-07-08|10:00|102|Expressing Culture Piece by Piece": {
+      "code": "Z8MPPC",
+      "slot": 812,
+      "scheduled": true,
+      "title": "Expressing Culture Piece by Piece"
+    },
+    "talk|2026-07-08|10:30|102|Discussion of 'Empowering Women Through ": {
+      "code": "TXRUA9",
+      "slot": 813,
+      "scheduled": true,
+      "title": "Discussion of 'Empowering Women Through Cave Exploration and Conservation' (Article by Ellen Trautner)"
+    },
+    "talk|2026-07-08|14:00|Auditorium|Sternes Cave Project, Crete, Greece": {
+      "code": "EKVJKX",
+      "slot": 814,
+      "scheduled": true,
+      "title": "Sternes Cave Project, Crete, Greece"
+    },
+    "talk|2026-07-08|14:30|Auditorium|Beneath the Thunder Dragon: Cave Explora": {
+      "code": "UPZLZE",
+      "slot": 815,
+      "scheduled": true,
+      "title": "Beneath the Thunder Dragon: Cave Exploration in Bhutan"
+    },
+    "talk|2026-07-08|15:00|Auditorium|Mulu Cave Project 2026": {
+      "code": "FKLEYH",
+      "slot": 816,
+      "scheduled": true,
+      "title": "Mulu Cave Project 2026"
+    },
+    "talk|2026-07-08|15:30|Auditorium|Mapping the Extensive Caves of the Newly": {
+      "code": "7QYREN",
+      "slot": 817,
+      "scheduled": true,
+      "title": "Mapping the Extensive Caves of the Newly Accessible L\u1ea1ng S\u01a1n Geopark, Vietnam"
+    },
+    "talk|2026-07-08|16:00|Auditorium|Archaeology to Advocacy: Southeast Sulaw": {
+      "code": "7MXDWW",
+      "slot": 818,
+      "scheduled": true,
+      "title": "Archaeology to Advocacy: Southeast Sulawesi 2025"
+    },
+    "talk|2026-07-08|16:30|Auditorium|Continued Exploration in Mindanao, Phili": {
+      "code": "8MQ8XM",
+      "slot": 819,
+      "scheduled": true,
+      "title": "Continued Exploration in Mindanao, Philippines"
+    },
+    "talk|2026-07-09|09:00|205|\"Camp Rock,\" aka \"The Black Mountain Hot": {
+      "code": "RGBHTD",
+      "slot": 820,
+      "scheduled": true,
+      "title": "\"Camp Rock,\" aka \"The Black Mountain Hotel\": Mount Mitchell's Historic Rock Shelter"
+    },
+    "talk|2026-07-09|09:15|205|A Brief Overview of the Significant Hoos": {
+      "code": "ZBB3WN",
+      "slot": 821,
+      "scheduled": true,
+      "title": "A Brief Overview of the Significant Hoosier Cavers 1850-2025"
+    },
+    "talk|2026-07-09|09:40|205|The 130-Year History of the Ohio Cave Su": {
+      "code": "ZRCWAV",
+      "slot": 822,
+      "scheduled": true,
+      "title": "The 130-Year History of the Ohio Cave Survey"
+    },
+    "talk|2026-07-09|10:10|205|Historic Cave Slides of Lewis David Lamo": {
+      "code": "JAQCKG",
+      "slot": 823,
+      "scheduled": true,
+      "title": "Historic Cave Slides of Lewis David Lamon, NSS2188FE, Taken 1952-1990"
+    },
+    "talk|2026-07-09|10:30|205|Josiah Mosher Jr. and the Mammoth Cave H": {
+      "code": "VMDCR8",
+      "slot": 824,
+      "scheduled": true,
+      "title": "Josiah Mosher Jr. and the Mammoth Cave Hotel"
+    },
+    "talk|2026-07-09|10:50|205|When Martel was Banished from Mammoth Ca": {
+      "code": "MZW3VT",
+      "slot": 825,
+      "scheduled": true,
+      "title": "When Martel was Banished from Mammoth Cave, or On Discovering a Rare Version of Hovey's 1912 Guidebook"
+    },
+    "talk|2026-07-09|11:15|205|Cooper's Cave, New York: A Notable Bicen": {
+      "code": "DJWQWK",
+      "slot": 826,
+      "scheduled": true,
+      "title": "Cooper's Cave, New York: A Notable Bicentennial, 1826-2026"
+    },
+    "talk|2026-07-09|11:35|205|Charles Waldack and Mammoth Cave": {
+      "code": "WS79S9",
+      "slot": 827,
+      "scheduled": true,
+      "title": "Charles Waldack and Mammoth Cave"
+    },
+    "talk|2026-07-09|11:55|205|Pennsylvania's Show Caves": {
+      "code": "PVB3PZ",
+      "slot": 828,
+      "scheduled": true,
+      "title": "Pennsylvania's Show Caves"
+    },
+    "talk|2026-07-09|09:00|254|An Investigation of Permanently Rigged R": {
+      "code": "QJHFPJ",
+      "slot": 829,
+      "scheduled": true,
+      "title": "An Investigation of Permanently Rigged Ropes"
+    },
+    "talk|2026-07-09|09:45|254|NSS Vertical Training Commission: July 2": {
+      "code": "YH8FSH",
+      "slot": 830,
+      "scheduled": true,
+      "title": "NSS Vertical Training Commission: July 2026 Progress Update"
+    },
+    "talk|2026-07-09|10:10|254|Vertical Caving: Some of My Heretical Op": {
+      "code": "K9799B",
+      "slot": 831,
+      "scheduled": true,
+      "title": "Vertical Caving: Some of My Heretical Opinions"
+    },
+    "talk|2026-07-09|10:35|254|Fundamentals of Rigging": {
+      "code": "KDCE9D",
+      "slot": 832,
+      "scheduled": true,
+      "title": "Fundamentals of Rigging"
+    },
+    "talk|2026-07-09|11:00|254|The Gauntlet": {
+      "code": "LW7FXW",
+      "slot": 833,
+      "scheduled": true,
+      "title": "The Gauntlet"
+    },
+    "talk|2026-07-09|11:25|254|History of Kernmantle Rope": {
+      "code": "CLYYPW",
+      "slot": 834,
+      "scheduled": true,
+      "title": "History of Kernmantle Rope"
+    },
+    "talk|2026-07-09|11:50|254|From Incident to Insight: A College Grot": {
+      "code": "N3M8MN",
+      "slot": 835,
+      "scheduled": true,
+      "title": "From Incident to Insight: A College Grotto's Perspective on a Vertical Rescue in Wind-Hicks Cave"
+    },
+    "talk|2026-07-09|12:15|254|Bolting Considerations for High Traffic ": {
+      "code": "SDPJVC",
+      "slot": 836,
+      "scheduled": true,
+      "title": "Bolting Considerations for High Traffic Caves and/or Bad Rock Quality: A Brief Introduction to Glue-In's"
+    },
+    "talk|2026-07-09|12:40|254|Fun and Sketchy Things to Do with Rappel": {
+      "code": "E3FSMZ",
+      "slot": 837,
+      "scheduled": true,
+      "title": "Fun and Sketchy Things to Do with Rappel Devices"
+    },
+    "talk|2026-07-09|09:05|102|The Discovery and Recovery of the Shenan": {
+      "code": "8Z3NXE",
+      "slot": 838,
+      "scheduled": true,
+      "title": "The Discovery and Recovery of the Shenandoah Caverns Peccaries and Reincarnation of PRIOVAC"
+    },
+    "talk|2026-07-09|09:25|102|Extinct Long-Nosed Peccary Remains from ": {
+      "code": "BJEEY3",
+      "slot": 839,
+      "scheduled": true,
+      "title": "Extinct Long-Nosed Peccary Remains from Shenandoah Wild Cave, Virginia: An Update"
+    },
+    "talk|2026-07-09|09:45|102|The Importance of Small Mammals in Cave ": {
+      "code": "UKVRTG",
+      "slot": 840,
+      "scheduled": true,
+      "title": "The Importance of Small Mammals in Cave Paleontology"
+    },
+    "talk|2026-07-09|10:25|102|Advances in Discovering and Managing Pal": {
+      "code": "E89WP9",
+      "slot": 841,
+      "scheduled": true,
+      "title": "Advances in Discovering and Managing Paleontological Resources in Tennessee Caves"
+    },
+    "talk|2026-07-09|10:45|102|New Interpretation of Sediments and Foss": {
+      "code": "JS3QPU",
+      "slot": 842,
+      "scheduled": true,
+      "title": "New Interpretation of Sediments and Fossils from a Cave in Sullivan County, Tennessee"
+    },
+    "talk|2026-07-09|11:05|102|An Ancient Short-Faced Bear Skeleton and": {
+      "code": "UKACBN",
+      "slot": 843,
+      "scheduled": true,
+      "title": "An Ancient Short-Faced Bear Skeleton and Other Fauna from Cebada, Chiquibul Cave System, Belize"
+    },
+    "talk|2026-07-09|14:15|154|Can AI Image Editing Tools Understand a ": {
+      "code": "SG9HJD",
+      "slot": 844,
+      "scheduled": true,
+      "title": "Can AI Image Editing Tools Understand a Cave?"
+    },
+    "talk|2026-07-09|14:45|154|Why and When to Choose a Cell Phone Over": {
+      "code": "VBCM7E",
+      "slot": 845,
+      "scheduled": true,
+      "title": "Why and When to Choose a Cell Phone Over a Conventional Digital Camera for Cave Photography"
+    },
+    "talk|2026-07-09|15:15|154|Diffraction Limited Optics and the New G": {
+      "code": "ZY7MZF",
+      "slot": 846,
+      "scheduled": true,
+      "title": "Diffraction Limited Optics and the New Galaxy S25 Ultra 200Mp Lens"
+    },
+    "talk|2026-07-09|14:05|102|Cataloging the National Cave Museum": {
+      "code": "QS9EQZ",
+      "slot": 847,
+      "scheduled": true,
+      "title": "Cataloging the National Cave Museum"
+    },
+    "talk|2026-07-09|14:25|102|Early Woodland Gypsum Mining at Bluff Ca": {
+      "code": "UBNCKV",
+      "slot": 848,
+      "scheduled": true,
+      "title": "Early Woodland Gypsum Mining at Bluff Cave, Mammoth Cave National Park, Kentucky"
+    },
+    "talk|2026-07-09|14:45|102|The Salts Cave/Unknown Cave Footprint Pr": {
+      "code": "LAMKYY",
+      "slot": 849,
+      "scheduled": true,
+      "title": "The Salts Cave/Unknown Cave Footprint Project, Mammoth Cave National Park, Kentucky"
+    },
+    "talk|2026-07-10|09:00|Auditorium|Geologic Characterization of the Glaciov": {
+      "code": "TPMWZW",
+      "slot": 850,
+      "scheduled": true,
+      "title": "Geologic Characterization of the Glaciovolcanic Caves of Mount Baker, Washington"
+    },
+    "talk|2026-07-10|09:20|Auditorium|New Paradigms of Speleogenesis in the Oh": {
+      "code": "CGDGZQ",
+      "slot": 851,
+      "scheduled": true,
+      "title": "New Paradigms of Speleogenesis in the Ohio River Valley"
+    },
+    "talk|2026-07-10|09:40|Auditorium|Utilizing Structural Lineament Mapping w": {
+      "code": "XFVBQL",
+      "slot": 852,
+      "scheduled": true,
+      "title": "Utilizing Structural Lineament Mapping with Digital Elevation Models for Understanding Speleogeneic Patterns in the Mammoth Cave Plateau"
+    },
+    "talk|2026-07-10|10:20|Auditorium|Applied Geophysics and LiDAR in Karst: F": {
+      "code": "ZFJV9K",
+      "slot": 853,
+      "scheduled": true,
+      "title": "Applied Geophysics and LiDAR in Karst: From Environmental Consulting to Cave Discovery"
+    },
+    "talk|2026-07-10|10:40|Auditorium|Quantifying and Comparing Sinkhole Morph": {
+      "code": "JSAP8C",
+      "slot": 854,
+      "scheduled": true,
+      "title": "Quantifying and Comparing Sinkhole Morphometry across Different Geospatial Datasets"
+    },
+    "talk|2026-07-10|11:00|Auditorium|Understanding the Variability in Gas Con": {
+      "code": "WBPC8W",
+      "slot": 855,
+      "scheduled": true,
+      "title": "Understanding the Variability in Gas Concentrations of Carlsbad Cavern"
+    },
+    "talk|2026-07-10|13:30|Auditorium|Evaluating Speleothem Samples as a Geolo": {
+      "code": "JBE8TB",
+      "slot": 856,
+      "scheduled": true,
+      "title": "Evaluating Speleothem Samples as a Geological Archive for Paleomagnetic Records and Environmental Interpretation"
+    },
+    "talk|2026-07-10|13:50|Auditorium|The Importance of Caves in the History o": {
+      "code": "XLNPL7",
+      "slot": 857,
+      "scheduled": true,
+      "title": "The Importance of Caves in the History of Geology"
+    },
+    "talk|2026-07-10|14:10|Auditorium|The Consequences of the Self-Modificatio": {
+      "code": "HXJTM7",
+      "slot": 858,
+      "scheduled": true,
+      "title": "The Consequences of the Self-Modification of Island Karst Aquifers"
+    },
+    "talk|2026-07-10|14:50|Auditorium|Exploring the Stratigraphic and Structur": {
+      "code": "KHWDRF",
+      "slot": 859,
+      "scheduled": true,
+      "title": "Exploring the Stratigraphic and Structural Context of the Cheve Karst System, Oaxaca, Mexico"
+    },
+    "talk|2026-07-10|15:10|Auditorium|Talus Caves of Franconia Notch, New Hamp": {
+      "code": "3QQSNJ",
+      "slot": 860,
+      "scheduled": true,
+      "title": "Talus Caves of Franconia Notch, New Hampshire"
+    },
+    "talk|2026-07-10|15:30|Auditorium|The Influence of Magnitude and Frequency": {
+      "code": "NDJQPE",
+      "slot": 861,
+      "scheduled": true,
+      "title": "The Influence of Magnitude and Frequency on the Relative Importance of Chemical and Mechanical Erosion: Examples from J2 and Slot Canyons in the Ozarks"
+    },
+    "talk|2026-07-10|13:00|205|Software Defined Cave Symbology": {
+      "code": "YTQULA",
+      "slot": 862,
+      "scheduled": true,
+      "title": "Software Defined Cave Symbology"
+    },
+    "talk|2026-07-10|13:15|205|How Do I Know Where This Drone Image Is?": {
+      "code": "E93EGS",
+      "slot": 863,
+      "scheduled": true,
+      "title": "How Do I Know Where This Drone Image Is?"
+    },
+    "talk|2026-07-10|13:40|205|Photogrammetry for Fun and Prospecting": {
+      "code": "VVR8UK",
+      "slot": 864,
+      "scheduled": true,
+      "title": "Photogrammetry for Fun and Prospecting"
+    },
+    "talk|2026-07-10|14:05|205|Testing and Reviewing the New 3DMakerpro": {
+      "code": "YGF9QE",
+      "slot": 865,
+      "scheduled": true,
+      "title": "Testing and Reviewing the New 3DMakerpro Raven Handheld LiDAR Scanner"
+    },
+    "talk|2026-07-10|14:25|205|Speleological Model in ArcGIS": {
+      "code": "PAYC8F",
+      "slot": 866,
+      "scheduled": true,
+      "title": "Speleological Model in ArcGIS"
+    },
+    "talk|2026-07-10|15:00|205|Developing New Surveyors, Sketchers and ": {
+      "code": "HYMCLX",
+      "slot": 867,
+      "scheduled": true,
+      "title": "Developing New Surveyors, Sketchers and Cartographers through Beginner Focused Projects"
+    },
+    "talk|2026-07-10|15:20|205|Techniques for Generating High-Definitio": {
+      "code": "8XYDFB",
+      "slot": 868,
+      "scheduled": true,
+      "title": "Techniques for Generating High-Definition Karst-Focused Terrain Imagery from LiDAR Surface Data"
+    },
+    "talk|2026-07-10|15:45|205|0Bar Maps: Interactive Maps for Your Cav": {
+      "code": "ELKPFF",
+      "slot": 869,
+      "scheduled": true,
+      "title": "0Bar Maps: Interactive Maps for Your Cave Phone"
+    },
+    "talk|2026-07-10|16:10|205|Select Methods Using Adobe Illustrator": {
+      "code": "FTD7RP",
+      "slot": 870,
+      "scheduled": true,
+      "title": "Select Methods Using Adobe Illustrator"
+    },
+    "talk|2026-07-10|16:35|205|Automated Cave Detection from LiDAR: Imp": {
+      "code": "9YBURH",
+      "slot": 871,
+      "scheduled": true,
+      "title": "Automated Cave Detection from LiDAR: Improved Methods and Broader Access"
+    },
+    "talk|2026-07-08|08:10|205|Examining Genetic Diversity and Potentia": {
+      "code": "AFK7SD",
+      "slot": 872,
+      "scheduled": true,
+      "title": "Examining Genetic Diversity and Potential Cryptic Diversity within the Georgia Blind Salamander and Dougherty Plain Cave Crayfish of the Upper Floridan Aquifer"
     }
   },
   "tracks": {
